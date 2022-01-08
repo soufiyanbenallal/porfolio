@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div >
       <Head>
-        <title>SOUFIYAN BENALLAL</title>
+        <title>PORTFOLIO | SOUFIYAN BENALLAL</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
