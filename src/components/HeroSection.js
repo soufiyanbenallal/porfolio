@@ -1,5 +1,3 @@
-
-
 export default function HeroSection() {
   return (
     <div className="bg-deep-purple-accent-700">
@@ -11,8 +9,7 @@ export default function HeroSection() {
                 <svg
                   className="w-10 h-10 text-deep-purple-900"
                   stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
+                  viewBox="0 0 52 52">
                   <polygon
                     strokeWidth="3"
                     strokeLinecap="round"
@@ -29,16 +26,14 @@ export default function HeroSection() {
                   <svg
                     viewBox="0 0 52 24"
                     fill="currentColor"
-                    className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-deep-purple-accent-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-                  >
+                    className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-deep-purple-accent-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
                     <defs>
                       <pattern
                         id="700c93bf-0068-4e32-aafe-ef5b6a647708"
                         x="0"
                         y="0"
                         width=".135"
-                        height=".30"
-                      >
+                        height=".30">
                         <circle cx="1" cy="1" r=".7" />
                       </pattern>
                     </defs>
@@ -53,15 +48,14 @@ export default function HeroSection() {
                 quick, brown fox jumps over a lazy dog
               </h2>
               <p className="text-base text-indigo-100 md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque rem aperiam, eaque ipsa quae.
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque rem aperiam, eaque ipsa quae.
               </p>
             </div>
             <div>
               <a
                 href="/"
-                className="inline-flex items-center justify-center h-12 px-6 font-semibold tracking-wide text-teal-900 transition duration-200 rounded shadow-md hover:text-deep-purple-900 bg-teal-accent-400 hover:bg-deep-purple-accent-100 focus:shadow-outline focus:outline-none"
-              >
+                className="inline-flex items-center justify-center h-12 px-6 font-semibold tracking-wide text-teal-900 transition duration-200 rounded shadow-md hover:text-deep-purple-900 bg-teal-accent-400 hover:bg-deep-purple-accent-100 focus:shadow-outline focus:outline-none">
                 Get started
               </a>
             </div>
