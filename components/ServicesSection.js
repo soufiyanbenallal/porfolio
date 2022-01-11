@@ -72,7 +72,7 @@ export default function ServicesSection() {
           />
         </svg>
         <h3 className="mb-3 text-lg font-medium leading-tight text-gray-900">
-          Grow your platform’s revenue
+          Grow your platforms revenue
         </h3>
         <p className="text-base leading-relaxed text-gray-600">
           Add in-person payments to your platform or marketplace. Using Terminal with Connect, you
