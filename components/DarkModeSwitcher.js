@@ -28,8 +28,8 @@ export default function DarkModeSwitcher() {
                 checked={enabled}
                 onChange={toggleDarkMode}
                 className={`${
-                    enabled ? 'bg-blue-600' : 'bg-gray-200'
-                } relative inline-flex items-center h-6 rounded-full w-11`}
+                    (enabled ? 'bg-blue-600 ' : 'bg-gray-200 ')
+                } relative inline-flex items-center h-6 my-1 rounded-full w-11`}
                 >
                 <span className="sr-only">Enable notifications</span>
                 <span
