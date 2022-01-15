@@ -6,7 +6,7 @@ export default function DetailsSection() {
           <div className="max-w-7xl mx-auto px-6 flex items-start justify-center">
             {/* Card is full width. Use in 12 col grid for best view. */}
             {/* Card code block start */}
-            <div className="flex flex-col md:flex-row mx-auto bg-white dark:bg-gray-900 dark:bg-opacity-50 shadow rounded-xl md:divide-x divide-gray-500 divide-opacity-50">
+            <div className="flex flex-col md:flex-row mx-auto bg-white dark:bg-gray-900 dark:bg-opacity-50 rounded-xl md:divide-x divide-gray-500 divide-opacity-50">
               <div className="w-full flex-1 px-12 flex flex-col items-center py-10">
                 <div className="w-24 h-24 mb-3 p-2 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
                   <img
@@ -38,24 +38,24 @@ export default function DetailsSection() {
                   </span>
                   Meknes, Morocco
                 </p>
-                <p className="text-gray-600 dark:text-gray-100 text-sm tracking-normal font-normal mb-8 text-center w-10/12">
+                <p className="text-gray-600 dark:text-gray-400 text-sm tracking-normal font-normal mb-8 text-center w-10/12">
                   The more I deal with the work as something that is my own, as something that is
                   personal, the more successful it is.
                 </p>
-                <div className="flex items-start">
-                  <div >
+                <div className="flex w-full items-start text-center divide-x divide-gray-500 divide-opacity-50">
+                  <div className="flex-1">
                     <h2 className="text-gray-600 dark:text-gray-100 text-2xl leading-6 mb-2 text-center">
                       82
                     </h2>
                     <p className="text-gray-800 dark:text-gray-100 text-sm leading-5">Reviews</p>
                   </div>
-                  <div className="mx-6 lg:mx-3 xl:mx-6 px-8 lg:px-4 xl:px-8 border-l border-r">
+                  <div className="flex-1">
                     <h2 className="text-gray-600 dark:text-gray-100 text-2xl leading-6 mb-2 text-center">
                       24
                     </h2>
                     <p className="text-gray-800 dark:text-gray-100 text-sm leading-5">Projects</p>
                   </div>
-                  <div >
+                  <div className="flex-1">
                     <h2 className="text-gray-600 dark:text-gray-100 text-2xl leading-6 mb-2 text-center">
                       20
                     </h2>
@@ -88,21 +88,21 @@ export default function DetailsSection() {
                 <p className="text-gray-600 dark:text-gray-100 text-sm tracking-normal font-normal mb-3 text-center">
                   Freelance
                 </p>
-                <p className="text-gray-600 dark:text-gray-100 text-sm tracking-normal font-normal mb-8 text-center w-10/12">
+                <p className="text-gray-600 dark:text-gray-400 text-sm tracking-normal font-normal mb-8 text-center w-10/12">
                   John is a true asset to us, providing advanced designing skills from years of
                   experience as UX designer.
                 </p>
-                <div className="flex items-start">
-                  <div className="bg-gray-200 text-gray-600 dark:text-gray-100 dark:bg-gray-700 rounded text-xs leading-3 py-2 px-3">
+                <div className="flex items-start space-x-3">
+                  <div className="bg-gray-200 text-gray-600 dark:text-gray-100 dark:bg-gray-800 rounded-full text-xs leading-3 py-2 px-3">
                     react
                   </div>
-                  <div className="bg-gray-200 text-gray-600 dark:text-gray-100 dark:bg-gray-700 rounded text-xs leading-3 py-2 px-3">
+                  <div className="bg-gray-200 text-gray-600 dark:text-gray-100 dark:bg-gray-800 rounded-full text-xs leading-3 py-2 px-3">
                     sass
                   </div>
-                  <div className="bg-gray-200 text-gray-600 dark:text-gray-100 dark:bg-gray-700 rounded mx-2 text-xs leading-3 py-2 px-3">
+                  <div className="bg-gray-200 text-gray-600 dark:text-gray-100 dark:bg-gray-800 rounded-full text-xs leading-3 py-2 px-3">
                     UI
                   </div>
-                  <div className="bg-gray-200 text-gray-600 dark:text-gray-100 dark:bg-gray-700 rounded text-xs leading-3 py-2 px-3">
+                  <div className="bg-gray-200 text-gray-600 dark:text-gray-100 dark:bg-gray-800 rounded-full text-xs leading-3 py-2 px-3">
                     UX
                   </div>
                 </div>

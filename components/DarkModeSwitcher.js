@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Switch } from '@headlessui/react'
 
 export default function DarkModeSwitcher() {
-  const [enabled, setEnabled] = useState(false)
+  const [enabled, setEnabled] = useState(true)
   const toggleDarkMode = (v) => {
     setEnabled(v)
     if (v) {
@@ -14,7 +14,7 @@ export default function DarkModeSwitcher() {
     }
   }
   useEffect(() => {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (enabled || localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark')
         if (enabled === false) {
             setEnabled(true)
