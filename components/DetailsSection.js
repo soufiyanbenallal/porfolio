@@ -1,4 +1,5 @@
 import React from 'react'
+import SocialMedia from './SocialMedia'
 
 export default function DetailsSection() {
     return (
@@ -6,9 +7,9 @@ export default function DetailsSection() {
           <div className="max-w-7xl mx-auto px-6 flex items-start justify-center">
             {/* Card is full width. Use in 12 col grid for best view. */}
             {/* Card code block start */}
-            <div className="flex flex-col md:flex-row mx-auto bg-white dark:bg-gray-900 dark:bg-opacity-50 rounded-xl md:divide-x divide-gray-500 divide-opacity-50">
+            <div className="flex flex-col md:flex-row mx-auto rounded-xl md:divide-x divide-gray-500 divide-opacity-20">
               <div className="w-full flex-1 px-12 flex flex-col items-center py-10">
-                <div className="w-24 h-24 mb-3 p-2 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                <div className="w-24 h-24 mb-3 p-2 rounded-full  flex items-center justify-center">
                   <img
                     className="w-full h-full overflow-hidden object-cover rounded-full"
                     src="/profile.jpg"
@@ -38,30 +39,11 @@ export default function DetailsSection() {
                   </span>
                   Meknes, Morocco
                 </p>
-                <p className="text-gray-600 dark:text-gray-400 text-sm tracking-normal font-normal mb-8 text-center w-10/12">
+                <p className="text-gray-600 dark:text-gray-400 text-xs mb-8 text-center w-full">
                   The more I deal with the work as something that is my own, as something that is
                   personal, the more successful it is.
                 </p>
-                <div className="flex w-full items-start text-center divide-x divide-gray-500 divide-opacity-50">
-                  <div className="flex-1">
-                    <h2 className="text-gray-600 dark:text-gray-100 text-2xl leading-6 mb-2 text-center">
-                      82
-                    </h2>
-                    <p className="text-gray-800 dark:text-gray-100 text-sm leading-5">Reviews</p>
-                  </div>
-                  <div className="flex-1">
-                    <h2 className="text-gray-600 dark:text-gray-100 text-2xl leading-6 mb-2 text-center">
-                      24
-                    </h2>
-                    <p className="text-gray-800 dark:text-gray-100 text-sm leading-5">Projects</p>
-                  </div>
-                  <div className="flex-1">
-                    <h2 className="text-gray-600 dark:text-gray-100 text-2xl leading-6 mb-2 text-center">
-                      20
-                    </h2>
-                    <p className="text-gray-800 dark:text-gray-100 text-sm leading-5">Approved</p>
-                  </div>
-                </div>
+                <SocialMedia />
               </div>
               <div className="w-full flex-1 px-12 flex flex-col items-center py-10">
                 <div className="mb-3 w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center cursor-pointer text-indigo-700">
@@ -83,48 +65,47 @@ export default function DetailsSection() {
                   </svg>
                 </div>
                 <h2 className="text-gray-800 dark:text-gray-100 text-xl tracking-normal text-center font-medium mb-1 capitalize">
-                  Senior front end 
+                  Senior Front-end 
                 </h2>
                 <p className="text-gray-600 dark:text-gray-100 text-sm tracking-normal font-normal mb-3 text-center">
                   Freelance
                 </p>
-                <p className="text-gray-600 dark:text-gray-400 text-sm tracking-normal font-normal mb-8 text-center w-10/12">
-                  John is a true asset to us, providing advanced designing skills from years of
-                  experience as UX designer.
+                <p className="text-gray-600 dark:text-gray-400 text-sm tracking-normal font-normal mb-8 text-center w-full">
+                 I am a person who is always looking for new challenges and new opportunities.
                 </p>
                 <div className="flex items-start space-x-3">
-                  <div className="bg-gray-200 text-gray-600 dark:text-gray-100 dark:bg-gray-800 rounded-full text-xs leading-3 py-2 px-3">
+                  <div className="bg-gray-200 text-gray-600 dark:text-red-200 dark:bg-red-900 border border-red-700 rounded-full text-xs leading-3 py-2 px-3">
                     react
                   </div>
-                  <div className="bg-gray-200 text-gray-600 dark:text-gray-100 dark:bg-gray-800 rounded-full text-xs leading-3 py-2 px-3">
+                  <div className="bg-gray-200 text-gray-600 dark:text-red-200 dark:bg-red-900 border border-red-700 rounded-full text-xs leading-3 py-2 px-3">
                     sass
                   </div>
-                  <div className="bg-gray-200 text-gray-600 dark:text-gray-100 dark:bg-gray-800 rounded-full text-xs leading-3 py-2 px-3">
+                  <div className="bg-gray-200 text-gray-600 dark:text-red-200 dark:bg-red-900 border border-red-700 rounded-full text-xs leading-3 py-2 px-3">
                     UI
                   </div>
-                  <div className="bg-gray-200 text-gray-600 dark:text-gray-100 dark:bg-gray-800 rounded-full text-xs leading-3 py-2 px-3">
+                  <div className="bg-gray-200 text-gray-600 dark:text-red-200 dark:bg-red-900 border border-red-700 rounded-full text-xs leading-3 py-2 px-3">
                     UX
                   </div>
                 </div>
               </div>
               <div className="w-full flex-1 flex-col flex justify-center items-center px-12 py-8">
                 <h2 className="text-center text-2xl text-gray-800 dark:text-gray-100 font-medium tracking-normal">
-                  $35
+                  88
                 </h2>
                 <h2 className="text-center text-sm text-gray-600 dark:text-gray-100 font-normal mt-2 mb-4 tracking-normal">
-                  Hourly Rate
+                  Reviews
                 </h2>
                 <h2 className="text-center text-2xl text-gray-800 dark:text-gray-100 font-medium tracking-normal">
-                  2000
+                  30
                 </h2>
                 <h2 className="text-center text-sm text-gray-600 dark:text-gray-100 font-normal mt-2 mb-4 tracking-normal">
-                  Hours Worked
+                  Projects
                 </h2>
                 <h2 className="text-center text-2xl text-gray-800 dark:text-gray-100 font-medium tracking-normal">
-                  95%
+                  24
                 </h2>
                 <h2 className="text-center text-sm text-gray-600 dark:text-gray-100 font-normal mt-2 mb-4 tracking-normal">
-                  Success Rate
+                  Approved
                 </h2>
        
               </div>
