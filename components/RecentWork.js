@@ -1,4 +1,4 @@
-/* This example requires Tailwind CSS v2.0+ */
+import React from 'react'
 const stats = [
     { label: 'Founded', value: '2021' },
     { label: 'Employees', value: '5' },
@@ -8,11 +8,11 @@ const stats = [
   
   export default function RecentWork() {
     return (
-      <div className="relative bg-white py-16 sm:py-24">
+      <div className="relative bg-white dark:bg-black py-16 sm:py-24">
         <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
           <div className="relative sm:py-16 lg:py-0">
             <div aria-hidden="true" className="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
-              <div className="absolute inset-y-0 right-1/2 w-full bg-gray-50 rounded-r-3xl lg:right-72" />
+              <div className="absolute inset-y-0 right-1/2 w-full bg-gray-50 dark:bg-gray-900 rounded-r-3xl lg:right-72" />
               <svg
                 className="absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12"
                 width={404}

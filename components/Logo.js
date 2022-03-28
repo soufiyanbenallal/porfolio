@@ -1,5 +1,4 @@
 import React from 'react'
-// fill='currentColor'
 export default function Logo({className}) {
     return (
         <svg version="1.1" className={className} xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

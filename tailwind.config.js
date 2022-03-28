@@ -10,6 +10,19 @@ module.exports = {
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
       },
+      colors:{
+        100: '#f5f5f5',
+        200: '#eeeeee',
+        300: '#e0e0e0',
+        400: '#bdbdbd',
+        500: '#9e9e9e',
+        600: '#757575',
+        700: '#616161',
+        800: '#323232',        
+        900: '#202223',
+        1000: '#1a1c1d',
+
+      },
       minHeight: {
         'md': '500px',
       }

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import React from 'react'
 // import HeroSection from '../components/HeroSection'
 import ServicesSection from '../components/ServicesSection'
 import DarkModeSwitcher from '../components/DarkModeSwitcher'
@@ -46,7 +47,7 @@ export default function Home() {
                 <p className="mt-3 text-base dark:text-gray-300 max-w-sm mx-auto ">
                   Hello, I&apos;m Soufiyan Frontend developer, I produce elegant, 
                   performant and accessible digital
-                  experciences UI & UX, please take a look around
+                  experciences UI/ UX, please take a look around
                 </p>
             </div>
           

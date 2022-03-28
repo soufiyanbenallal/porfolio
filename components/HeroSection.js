@@ -5,7 +5,7 @@ export default function HeroSection() {
         <div>
           <h2 className="mb-4 text-2xl font-extrabold tracking-tight text-center text-black md:leading-tight sm:text-left md:text-4xl">Clear overview for efficient tracking</h2>
           <p className="mb-5 text-base text-center text-gray-600 sm:text-left md:text-lg">
-            Handle your subscriptions and transactions efficiently with the clear overview in Dashboard. Features like the smart search option allow you to quickly find any data you’re looking for.
+            Handle your subscriptions and transactions efficiently with the clear overview in Dashboard. Features like the smart search option allow you to quickly find any data you&apos;re looking for.
           </p>
           <a href="#" className="w-full btn btn-dark btn-lg sm:w-auto">Learn More</a>
         </div>
