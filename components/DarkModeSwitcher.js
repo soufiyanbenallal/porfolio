@@ -1,9 +1,9 @@
-import React,{ useEffect, useState } from 'react'
+import React,{ useEffect, useState, useCallback } from 'react'
 import { Switch } from '@headlessui/react'
 
 export default function DarkModeSwitcher() {
   const [enabled, setEnabled] = useState(true)
-  const toggleDarkMode = (v) => {
+  const toggleDarkMode = useCallback((v) => {
     setEnabled(v)
     if (v) {
         // Whenever the user explicitly chooses dark mode
@@ -12,7 +12,7 @@ export default function DarkModeSwitcher() {
         // Whenever the user explicitly chooses light mode
         localStorage.theme = 'light'
     }
-  }
+  }, [enabled])
   useEffect(() => {
     if (enabled || localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark')
