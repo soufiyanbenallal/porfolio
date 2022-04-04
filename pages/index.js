@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React from 'react'
 // import HeroSection from '../components/HeroSection'
 import ServicesSection from '../components/ServicesSection'
-import DarkModeSwitcher from '../components/DarkModeSwitcher'
+// import DarkModeSwitcher from '../components/DarkModeSwitcher'
 // import Footer from '../components/Footer'
 import Logo from '../components/Logo'
 // import DetailsSection from '../components/DetailsSection'
@@ -31,7 +31,7 @@ export default function Home() {
               <a href="" className=" max-w-max">
                 <Logo className="h-6 text-black dark:text-white" />
               </a>
-              <DarkModeSwitcher />
+              {/* <DarkModeSwitcher /> */}
             </div>
           </section>
           <section className="relative overflow-hidden flex min-h-screen items-center">
