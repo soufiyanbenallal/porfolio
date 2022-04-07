@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect } from 'react'
 // import HeroSection from '../components/HeroSection'
 import ServicesSection from '../components/ServicesSection'
 // import DarkModeSwitcher from '../components/DarkModeSwitcher'
@@ -10,6 +10,10 @@ import RecentWork from '../components/RecentWork'
 import Layout from '../layouts/Layout'
 
 export default function Home() {
+  useEffect(() => {
+    document.documentElement.classList.add('dark')
+
+  }, [])
   
   return (
     <>
@@ -37,7 +41,7 @@ export default function Home() {
           <section className="relative overflow-hidden flex min-h-screen items-center">
               <img className="absolute right-1/2 top-0 transform z-0 translate-x-1/2 max-w-3xl w-full" src="/bg-profile.jpg" alt="" />
             <div className="container relative z-10 py-8 text-center">
-              <h1 className="dark:text-gray-400 uppercase text-base mb-10  text-center" >
+              <h1 className="dark:text-gray-400 uppercase text-base mb-10 text-center" >
                 <span>Build the app you want, Get the your work done.</span>
               </h1>
               <h1 className="dark:text-white text-8xl font-medium space-y-4 mb-12 relative mx-auto text-center flex flex-col items-center justify-center" >
