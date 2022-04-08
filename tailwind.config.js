@@ -1,16 +1,16 @@
 // eslint-disable-next-line no-undef
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Roboto", "sans-serif"],
+        sans: ['Roboto', 'sans-serif'],
       },
-      colors:{
+      colors: {
         100: '#f5f5f5',
         200: '#eeeeee',
         300: '#e0e0e0',
@@ -18,15 +18,14 @@ module.exports = {
         500: '#9e9e9e',
         600: '#757575',
         700: '#616161',
-        800: '#323232',        
+        800: '#323232',
         900: '#202223',
         1000: '#1a1c1d',
-
       },
       minHeight: {
-        'md': '500px',
-      }
+        md: '500px',
+      },
     },
   },
   plugins: [],
-}
+};

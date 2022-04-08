@@ -1,0 +1,5 @@
+# .estlintignore file
+/.next/
+/out/
+dist
+node_modules/

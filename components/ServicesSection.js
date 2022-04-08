@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 export default function ServicesSection() {
   return (
     <section className="container grid grid-cols-1 gap-20 py-24 md:grid-cols-2 lg:grid-cols-3">
@@ -9,7 +9,8 @@ export default function ServicesSection() {
           viewBox="0 0 24 24"
           stroke="currentColor"
           className="w-12 h-12 mb-4 text-purple-700"
-          aria-hidden="true">
+          aria-hidden="true"
+        >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -21,9 +22,9 @@ export default function ServicesSection() {
           Unify your payments stack
         </h3>
         <p className="text-base leading-relaxed text-gray-600">
-          Manage all your online and offline sales in one place with a single integration,
-          simplifying reporting and reconciliation. Terminal works seamlessly with Payments,
-          Connect, and Billing.
+          Manage all your online and offline sales in one place with a single
+          integration, simplifying reporting and reconciliation. Terminal works
+          seamlessly with Payments, Connect, and Billing.
         </p>
       </div>
       <div>
@@ -33,7 +34,8 @@ export default function ServicesSection() {
           viewBox="0 0 24 24"
           stroke="currentColor"
           className="w-12 h-12 mb-4 text-purple-700"
-          aria-hidden="true">
+          aria-hidden="true"
+        >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -51,9 +53,9 @@ export default function ServicesSection() {
           Own your in-store experience
         </h3>
         <p className="text-base leading-relaxed text-gray-600">
-          Provide a seamless customer experience across channels, like reserving online and picking
-          up in store. Our SDKs make it easy to integrate into your own mobile and web applications
-          to accept in-store payments.
+          Provide a seamless customer experience across channels, like reserving
+          online and picking up in store. Our SDKs make it easy to integrate
+          into your own mobile and web applications to accept in-store payments.
         </p>
       </div>
       <div>
@@ -63,7 +65,8 @@ export default function ServicesSection() {
           viewBox="0 0 24 24"
           stroke="currentColor"
           className="w-12 h-12 mb-4 text-purple-700"
-          aria-hidden="true">
+          aria-hidden="true"
+        >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -75,11 +78,11 @@ export default function ServicesSection() {
           Grow your platforms revenue
         </h3>
         <p className="text-base leading-relaxed text-gray-600">
-          Add in-person payments to your platform or marketplace. Using Terminal with Connect, you
-          can onboard users for online and in-person payments, and unify their payouts across
-          channels.
+          Add in-person payments to your platform or marketplace. Using Terminal
+          with Connect, you can onboard users for online and in-person payments,
+          and unify their payouts across channels.
         </p>
       </div>
     </section>
-  )
+  );
 }
