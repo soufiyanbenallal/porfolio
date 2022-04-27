@@ -1,7 +1,7 @@
 import React from 'react';
 export default function ServicesSection() {
   return (
-    <section className="container grid grid-cols-1 gap-20 py-24 md:grid-cols-2 lg:grid-cols-3">
+    <section className="container grid grid-cols-1 gap-20 py-24 md:grid-cols-2 lg:grid-cols-3 rounded-b-xl overflow-hidden">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"

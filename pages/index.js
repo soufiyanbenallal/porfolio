@@ -31,12 +31,8 @@ export default function Home() {
         ></link>
       </Head>
       <Layout>
-        <div className="bg-gradient-to-r dark:from-gray-900 dark:via-black dark:to-gray-900 inline-block w-full">
-          <div className="absolute left-0 top-0 w-full h-screen bg opacity-10"></div>
-          <section className="py-3 flex justify-center bg-black border-b border-gray-300 text-sm  border-opacity-20 text-red-500 top-0 sticky z-50">
-            {' '}
-            Profile still in development !!
-          </section>
+        <div className="bg-gradient-to-r dark:from-black dark:via-gray-1000 dark:to-black inline-block w-full">
+     
           <section className="my-8">
             <div className="container flex justify-between">
               <a href="" className=" max-w-max">
@@ -46,11 +42,11 @@ export default function Home() {
             </div>
           </section>
           <section className="relative overflow-hidden flex min-h-screen items-center">
-            <img
+            {/* <img
               className="absolute right-1/2 top-0 transform z-0 translate-x-1/2 max-w-3xl w-full"
               src="/bg-profile.jpg"
               alt=""
-            />
+            /> */}
             <div className="container relative z-10 py-8 text-center">
               <h1 className="dark:text-gray-400 uppercase text-base mb-10 text-center">
                 <span>Build the app you want, Get the your work done.</span>
@@ -67,6 +63,7 @@ export default function Home() {
             </div>
                       </section>
           <RecentWork />
+          <RecentWork inverse />
           <ServicesSection />
           {/* <HeroSection /> */}
         </div>

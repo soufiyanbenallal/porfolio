@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    './layouts/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class',
   theme: {
@@ -20,12 +21,14 @@ module.exports = {
         700: '#616161',
         800: '#323232',
         900: '#202223',
-        1000: '#1a1c1d',
+        1000: '##0a0e18',
       },
       minHeight: {
         md: '500px',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
