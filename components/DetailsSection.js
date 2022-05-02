@@ -16,7 +16,7 @@ export default function DetailsSection() {
                 alt="avatar"
               />
             </div>
-            <h2 className="text-gray-800 text-xl tracking-normal font-medium mb-1">
+            <h2 className="text-gray-200 dark:text-gray-900 text-xl tracking-normal font-medium mb-1">
               Soufiyan benallal
             </h2>
             <p className="flex text-gray-600 text-sm tracking-normal font-normal mb-3 text-center">
@@ -40,11 +40,11 @@ export default function DetailsSection() {
               </span>
               Meknes, Morocco
             </p>
-            <p className="text-gray-60 text-xs mb-8 text-center w-full">
+            <p className="text-gray-500 dark:text-gray-800 text-xs mb-8 text-center w-full">
               The more I deal with the work as something that is my own, as
               something that is personal, the more successful it is.
             </p>
-            <SocialMedia />
+            <SocialMedia className="text-gray-100 dark:text-gray-900"/>
           </div>
           <div className="w-full flex-1 px-12 flex flex-col items-center py-10">
             <div className="mb-3 w-24 h-24 rounded-full bg-gray-200  flex items-center justify-center cursor-pointer text-indigo-700">
@@ -66,28 +66,28 @@ export default function DetailsSection() {
                 <polyline points="4 16 12 20 20 16" />
               </svg>
             </div>
-            <h2 className="text-gray-800 text-xl tracking-normal text-center font-medium mb-1 capitalize">
-              Senior Front-end
+            <h2 className="text-gray-200 dark:text-gray-900 text-xl tracking-normal text-center font-medium mb-1 capitalize">
+              Frontend Engineering Developer
             </h2>
             <p className="text-gray-600 text-sm tracking-normal font-normal mb-3 text-center">
-              Freelance
+              Freelance / contact
             </p>
-            <p className="text-gray-60 text-sm tracking-normal font-normal mb-8 text-center w-full">
+            <p className="text-gray-500 dark:text-gray-800 text-xs tracking-normal font-normal mb-8 text-center w-full">
               I am a person who is always looking for new challenges and new
               opportunities.
             </p>
             <div className="flex items-start space-x-3">
-              <div className="bg-gray-200 text-gray-600 border rounded-full text-xs leading-3 py-2 px-3">
+              <div className="dark:bg-gray-200 bg-gray-1000 text-gray-600 border dark:border-gray-300 border-gray-800 rounded-full text-xs leading-3 py-2 px-3">
                 react
               </div>
-              <div className="bg-gray-200 text-gray-600 border rounded-full text-xs leading-3 py-2 px-3">
+              <div className="dark:bg-gray-200 bg-gray-1000 text-gray-600 border dark:border-gray-300 border-gray-800 rounded-full text-xs leading-3 py-2 px-3">
                 sass
               </div>
-              <div className="bg-gray-200 text-gray-600 border rounded-full text-xs leading-3 py-2 px-3">
-                UI
+              <div className="dark:bg-gray-200 bg-gray-1000 text-gray-600 border dark:border-gray-300 border-gray-800 rounded-full text-xs leading-3 py-2 px-3">
+                UI/UX
               </div>
-              <div className="bg-gray-200 text-gray-600 border rounded-full text-xs leading-3 py-2 px-3">
-                UX
+              <div className="dark:bg-gray-200 bg-gray-1000 text-gray-600 border dark:border-gray-300 border-gray-800 rounded-full text-xs leading-3 py-2 px-3">
+                Nuxt
               </div>
             </div>
           </div>
