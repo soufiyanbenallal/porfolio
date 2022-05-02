@@ -15,6 +15,10 @@ function layoutAnimate() {
 }
 export default function Layout({ children }) {
   useEffect(() => {
+  const body = document.querySelector('body');
+
+    body.classList.add('dark:bg-gray-100');
+    body.classList.add('bg-gray-900');
     layoutAnimate();
   }, []);
 

@@ -9,7 +9,8 @@ export default function RecentWork({inverse}) {
             aria-hidden="true"
             className="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen"
           >
-            <div className="absolute inset-y-0 right-1/2 w-full bg-gray-900 bg-opacity-40 rounded-r-3xl lg:right-72" />
+            <div className="absolute inset-y-0 right-1/2 w-full dark:bg-gray-800 bg-gray-400 opacity-20 rounded-r-3xl lg:right-72" />
+
             <svg
               className="absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12 opacity-10"
               width={404}
@@ -91,7 +92,7 @@ export default function RecentWork({inverse}) {
       <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0" style={{order: inverse ? 1 : 0}}>
         {/* Content area */}
         <div className="pt-12 sm:pt-16 lg:pt-20">
-          <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl text-gray-800 dark:text-gray-100 font-extrabold tracking-tight sm:text-4xl">
             On a mission to empower teams
           </h2>
           <div className="mt-6 text-gray-500 space-y-6">
@@ -109,45 +110,6 @@ export default function RecentWork({inverse}) {
               Sollicitudin tristique eros erat odio sed vitae, consequat
               turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
               eu viverra donec ut volutpat donec laoreet quam urna.
-            </p>
-            <p className="text-base leading-7">
-              Sollicitudin tristique eros erat odio sed vitae, consequat
-              turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-              eu viverra donec ut volutpat donec laoreet quam urna.
-              Sollicitudin tristique eros erat odio sed vitae, consequat
-              turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-              eu viverra donec ut volutpat donec laoreet quam urna.
-            </p>
-            <p className="text-base leading-7">
-              Sollicitudin tristique eros erat odio sed vitae, consequat
-              turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-              eu viverra donec ut volutpat donec laoreet quam urna.
-              Sollicitudin tristique eros erat odio sed vitae, consequat
-              turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-              eu viverra donec ut volutpat donec laoreet quam urna.
-            </p>
-            <p className="text-base leading-7">
-              Sollicitudin tristique eros erat odio sed vitae, consequat
-              turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-              eu viverra donec ut volutpat donec laoreet quam urna.
-              Sollicitudin tristique eros erat odio sed vitae, consequat
-              turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-              eu viverra donec ut volutpat donec laoreet quam urna.
-            </p>
-            <p className="text-base leading-7">
-              Sollicitudin tristique eros erat odio sed vitae, consequat
-              turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-              eu viverra donec ut volutpat donec laoreet quam urna.
-              Sollicitudin tristique eros erat odio sed vitae, consequat
-              turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-              eu viverra donec ut volutpat donec laoreet quam urna.
-            </p>
-            <p className="text-base leading-7">
-              Rhoncus nisl, libero egestas diam fermentum dui. At quis
-              tincidunt vel ultricies. Vulputate aliquet velit faucibus
-              semper. Pellentesque in venenatis vestibulum consectetur nibh
-              id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim
-              fermentum lacus in. Viverra.
             </p>
           </div>
         </div>
