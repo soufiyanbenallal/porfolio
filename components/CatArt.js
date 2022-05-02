@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import React from 'react'
+import React,{useEffect} from 'react'
 
 export default function CatArt({ className = "",eyeClassName="" }) {
-    React.useEffect(() => {
+    useEffect(() => {
         const eye = document.querySelector('.st1');
         const eye2 = document.querySelector('.st2');
         eye && window.addEventListener('mousemove', (event) => {
