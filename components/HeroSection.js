@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function HeroSection() {
   return (
     <section className="container py-24">

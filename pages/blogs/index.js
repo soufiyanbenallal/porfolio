@@ -1,6 +1,7 @@
 import React , { useEffect,useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+// eslint-disable-next-line no-unused-vars
 import { get } from "../../services/api.service";
 import {isUrlValid} from "simple-form-validations";
 const navigation = [
@@ -12,31 +13,32 @@ return classes.filter(Boolean).join(' ')
 }
 
 export default function Index() {
+  // eslint-disable-next-line no-unused-vars
   const [articles, setArticles] = useState({meta: {}, data: []});
   // const [loading, setLoading] = useState(true);
   // const [page, setPage] = useState(0);
-  const [page] = useState(0);
+  // const [page] = useState(0);
   /**
    * fetch articles
    * @return {Promise<void>}
    */
-   const fetchArticles = () => {
-     const payload = {
-      "pagination[page]": page,
-      "pagination[pageSize]": 1,
-      // fields: title,
-      populate: "author,category",
-     }
+  //  const fetchArticles = () => {
+  //    const payload = {
+  //     "pagination[page]": page,
+  //     "pagination[pageSize]": 1,
+  //     // fields: title,
+  //     populate: "author,category",
+  //    }
 
-    get('articles', payload)
-    .then(({data}) => {
-        console.log(data);
-        setArticles(data);
-    })
-    .catch(err => {
-        console.log(err);
-    })
-   }
+  //   get('articles', payload)
+  //   .then(({data}) => {
+  //       console.log(data);
+  //       setArticles(data);
+  //   })
+  //   .catch(err => {
+  //       console.log(err);
+  //   })
+  //  }
 
    /**
     * lifecycle hook 
