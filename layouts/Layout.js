@@ -20,7 +20,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <main className="wrapper rounded-b-xl">{children}</main>
+      <main className="wrapper rounded-b-xl overflow-hidden">{children}</main>
       <Footer />
     </>
   );

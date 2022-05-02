@@ -43,3 +43,42 @@ body.tight .wrapper {
   transform: translateY(-60px) scale(0.85);
   cursor: pointer;
 }
+
+.bg-text {
+  content: "Soufiyan";
+  font-size: 12vw;
+  color: #ffffff4d;
+  z-index: 0;
+  transform: rotate(-25deg);
+  position: absolute;
+  font-weight: 900;
+}
+.bg-split:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 404px;
+  height: 150vh;
+  z-index: 0;
+  background: ;
+  background: #85869482;
+  background: -moz-linear-gradient(180deg, #85869482 0%, #85869482 63%, #85869482 100%);
+  background: -webkit-linear-gradient(180deg, #85869482 0%, #85869482 63%, #85869482 100%);
+  background: linear-gradient(180deg, #85869482 0%, #85869482 63%, #85869482 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#252528",endColorstr="#000000",GradientType=1);
+  opacity: .2;
+  /* background-attachment: fixed; */
+}
+.text-vertical {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
+.text-stroke {
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(106, 106, 106);
+}
+.text-shadow {
+  text-shadow: 0 0 1px #b3b3b3;
+}
