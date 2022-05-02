@@ -1,14 +1,10 @@
 import React , { useEffect,useState } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
 // eslint-disable-next-line no-unused-vars
 import { get } from "../../services/api.service";
 import {isUrlValid} from "simple-form-validations";
 import Layout from '../../layouts/Layout';
 import Header from '../../components/Header';
-const navigation = [
-  { name: 'Portfolio', href: '/' },
-]
+
 
 function classNames(...classes) {
 return classes.filter(Boolean).join(' ')
