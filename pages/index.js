@@ -35,13 +35,13 @@ export default function Home() {
               <CatArt className='text-gray-600 dark:text-gray-800 w-full max-w-md opacity-50' eyeClassName="text-gray-600 dark:text-gray-600 fill-current" />
             </div>
             <div className="relative z-10 py-32 text-center md:text-left">
-              <h1 className="dark:text-gray-200 text-7xl md:text-9xl font-extrabold space-y-4 mb-12 relative mx-auto flex flex-col items-center md:items-start justify-center">
+              <h1 className="dark:text-gray-200 text-6<<xl md:text-9xl font-extrabold space-y-4 mb-12 relative mx-auto flex flex-col items-center md:items-start justify-center">
                 <div className='tracking-wide'>
                   <span className='text-stroke'>DEF</span>
                   <span>IN</span>
                   <span className='text-stroke'>ING </span>
                 </div>
-                <div className='text-[2.35rem] tracking-wider'><span>The Future of</span> <span>Apps</span> </div>
+                <div className='text-[2rem] md:text-[2.35rem] tracking-wider'><span>The Future of</span> <span>Apps</span> </div>
               </h1>
               <p className="font-light dark:text-gray-500 max-w-sm text-shadow">
                 Hello, I&apos;m Soufiyan Frontend developer, I produce elegant,

@@ -72,7 +72,7 @@ body.tight .wrapper {
 }
 .text-stroke {
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: rgb(106, 106, 106);
 }
 .text-shadow {
