@@ -30,18 +30,16 @@ export default function Home() {
         <div className="bg-split bg-gray-100 dark:bg-gray-900 inline-block w-full">
           <DotsSvg />
           <Header /> 
-          <section className="container-fluid px-4 relative overflow-hidden flex items-center">
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 transform z-0 max-w-md w-full">
+          <section className="container-fluid px-4 relative flex items-center">
+            <div className="absolute right-0 -top-1/3 z-0  w-full">
               <CatArt className='text-gray-600 dark:text-gray-800 w-full max-w-md opacity-50' eyeClassName="text-gray-600 dark:text-gray-600 fill-current" />
             </div>
             <div className="relative z-10 py-32 text-center md:text-left">
-              <h1 className="dark:text-gray-200 text-6<<xl md:text-9xl font-extrabold space-y-4 mb-12 relative mx-auto flex flex-col items-center md:items-start justify-center">
+              <h1 className="dark:text-gray-200 text-6xl md:text-8xl font-extrabold space-y-4 mb-12 relative mx-auto flex flex-col items-center md:items-start justify-center">
                 <div className='tracking-wide'>
-                  <span className='text-stroke'>DEF</span>
-                  <span>IN</span>
-                  <span className='text-stroke'>ING </span>
+                  Defining
                 </div>
-                <div className='text-[2rem] md:text-[2.35rem] tracking-wider'><span>The Future of</span> <span>Apps</span> </div>
+                <div className='text-stroke text-[2rem] md:text-[5rem] tracking-wider'><span>The Future of</span> <span>Apps</span> </div>
               </h1>
               <p className="font-light dark:text-gray-500 max-w-sm text-shadow">
                 Hello, I&apos;m Soufiyan Frontend developer, I produce elegant,

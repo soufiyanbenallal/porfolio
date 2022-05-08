@@ -16,9 +16,12 @@
     "@heroicons/react": "^1.0.1",
     "axios": "^0.27.2",
     "framer-motion": "^4.1.17",
+    "lottie-react": "^2.2.1",
+    "lottie-web": "^5.9.4",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-waypoint": "^10.1.0",
     "simple-form-validations": "^2.0.1"
   },
   "devDependencies": {

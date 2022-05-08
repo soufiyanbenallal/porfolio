@@ -55,13 +55,13 @@ body.tight .wrapper {
   top: 0;
   left: 0;
   width: 404px;
-  height: 150vh;
+  height: 110vh;
   z-index: 0;
   background: ;
   background: #85869482;
-  background: -moz-linear-gradient(180deg, #85869482 0%, #85869482 63%, #85869482 100%);
-  background: -webkit-linear-gradient(180deg, #85869482 0%, #85869482 63%, #85869482 100%);
-  background: linear-gradient(180deg, #85869482 0%, #85869482 63%, #85869482 100%);
+  background: -moz-linear-gradient(180deg, #85869482 0%, #85869482 63%, #0000 100%);
+  background: -webkit-linear-gradient(180deg, #85869482 0%, #85869482 63%, #0000 100%);
+  background: linear-gradient(180deg, #85869482 0%, #85869482 63%, #0000 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#252528",endColorstr="#000000",GradientType=1);
   opacity: .2;
   /* background-attachment: fixed; */
@@ -73,8 +73,8 @@ body.tight .wrapper {
 .text-stroke {
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: rgb(106, 106, 106);
+  -webkit-text-stroke-color: rgb(207, 207, 207);  
 }
 .text-shadow {
-  text-shadow: 0 0 1px #b3b3b3;
+  text-shadow: 0 0 1px #b3b3b3c6;
 }

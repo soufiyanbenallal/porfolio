@@ -2,7 +2,10 @@ import React from 'react';
 export default function ServicesSection() {
   return (
     <section className="container grid grid-cols-1 gap-20 py-24 md:grid-cols-2 lg:grid-cols-3 rounded-b-xl overflow-hidden">
-      <div>
+      <article className='col-span-1 md:col-span-2 lg:col-span-3'>
+        <h3 className='text-4xl dark:text-gray-100'>Solutions for you</h3>
+      </article>
+      <article>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -26,8 +29,8 @@ export default function ServicesSection() {
           integration, simplifying reporting and reconciliation. Terminal works
           seamlessly with Payments, Connect, and Billing.
         </p>
-      </div>
-      <div>
+      </article>
+      <article>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -57,8 +60,8 @@ export default function ServicesSection() {
           online and picking up in store. Our SDKs make it easy to integrate
           into your own mobile and web applications to accept in-store payments.
         </p>
-      </div>
-      <div>
+      </article>
+      <article>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -82,7 +85,7 @@ export default function ServicesSection() {
           with Connect, you can onboard users for online and in-person payments,
           and unify their payouts across channels.
         </p>
-      </div>
+      </article>
     </section>
   );
 }
