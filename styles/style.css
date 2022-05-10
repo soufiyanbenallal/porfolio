@@ -26,6 +26,10 @@
   background-attachment: fixed;
   background-size: cover;
 }
+.bg-blur {
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
 /* ===================== */
 
 

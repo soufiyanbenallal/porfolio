@@ -30,9 +30,9 @@ export default function Home() {
         <div className="bg-split bg-gray-100 dark:bg-gray-900 inline-block w-full">
           <DotsSvg />
           <Header /> 
-          <section className="container-fluid px-4 relative flex items-center">
-            <div className="absolute right-0 -top-1/3 z-0  w-full">
-              <CatArt className='text-gray-600 dark:text-gray-800 w-full max-w-md opacity-50' eyeClassName="text-gray-600 dark:text-gray-600 fill-current" />
+          <section className="container-fluid px-4 overflow-hidden relative flex items-center md:-mt-28">
+            <div className="absolute md:-right-32 right-0 top-0 z-0 w-full max-w-fit overflow-hidden">
+              <CatArt className='text-gray-600 dark:text-gray-800 w-full opacity-50' eyeClassName="text-gray-600 dark:text-gray-600 fill-current" />
             </div>
             <div className="relative z-10 py-32 text-center md:text-left">
               <h1 className="dark:text-gray-200 text-6xl md:text-8xl font-extrabold space-y-4 mb-12 relative mx-auto flex flex-col items-center md:items-start justify-center">

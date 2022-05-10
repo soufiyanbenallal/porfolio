@@ -6,7 +6,7 @@ import SocialMedia from './SocialMedia'
 
 export default function Header() {
   return (
-    <header className="my-4 relative z-10">
+    <header className="py-4 relative z-10">
         <nav className="container-fluid hidden md:flex justify-end mb-3 dark:text-gray-100 text-gray-900">
             <SocialMedia />
         </nav>
