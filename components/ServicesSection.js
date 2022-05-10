@@ -63,7 +63,7 @@ export default function ServicesSection() {
           into your own mobile and web applications to accept in-store payments.
         </p>
       </Card>
-      <article>
+      <Card>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -87,7 +87,7 @@ export default function ServicesSection() {
           with Connect, you can onboard users for online and in-person payments,
           and unify their payouts across channels.
         </p>
-      </article>
+      </Card>
     </section>
   );
 }
