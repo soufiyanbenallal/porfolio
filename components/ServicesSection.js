@@ -1,11 +1,11 @@
 import React from 'react';
-import { motion, useTransform, useViewportScroll } from "framer-motion"
+// import { motion, useTransform, useViewportScroll } from "framer-motion"
 import { Card } from '../motions/OnScroll';
 export default function ServicesSection() {
   return (
     <section className="container grid grid-cols-1 gap-20 py-24 md:grid-cols-2 lg:grid-cols-3 rounded-b-xl overflow-hidden">
-      <article className='col-span-1 md:col-span-2 lg:col-span-3'>
-        <h3 className='text-4xl dark:text-gray-100'>Solutions for you</h3>
+      <article className="col-span-1 md:col-span-2 lg:col-span-3">
+        <h3 className="text-4xl dark:text-gray-100">Solutions for you</h3>
       </article>
       <Card>
         <svg

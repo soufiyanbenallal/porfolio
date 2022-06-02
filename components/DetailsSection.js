@@ -44,7 +44,7 @@ export default function DetailsSection() {
               The more I deal with the work as something that is my own, as
               something that is personal, the more successful it is.
             </p>
-            <SocialMedia className="text-gray-100 dark:text-gray-900"/>
+            <SocialMedia className="text-gray-100 dark:text-gray-900" />
           </div>
           <div className="w-full flex-1 px-12 flex flex-col items-center py-10">
             <div className="mb-3 w-24 h-24 rounded-full bg-gray-200  flex items-center justify-center cursor-pointer text-indigo-700">

@@ -1,6 +1,6 @@
-import * as React from "react";
-import lottie from "lottie-web";
-import animationData from "../lotties/bg-flow2.json";
+import * as React from 'react';
+import lottie from 'lottie-web';
+import animationData from '../lotties/bg-flow2.json';
 
 const LottieControl = () => {
   const lottieRef = React.useRef(null);
@@ -12,7 +12,7 @@ const LottieControl = () => {
       // renderer: "svg",
       loop: false,
       autoplay: false,
-      animationData
+      animationData,
     });
     const maxFrames = anim.totalFrames;
     // anim.play();
@@ -21,17 +21,17 @@ const LottieControl = () => {
       const scrollPosition = window.scrollY;
 
       const frame = (maxFrames / 100) * (scrollPosition / (duration / 100));
-      const v = frame < 125 ?  frame : 225 ;
-      anim.goToAndStop(v , true);
+      const v = frame < 125 ? frame : 225;
+      anim.goToAndStop(v, true);
     }
     const onScroll = () => {
       animatebodymovin(animDuration);
     };
 
-    document.addEventListener("scroll", onScroll);
+    document.addEventListener('scroll', onScroll);
     return () => {
       anim.destroy();
-      document.removeEventListener("scroll", onScroll);
+      document.removeEventListener('scroll', onScroll);
     };
   }, []);
 

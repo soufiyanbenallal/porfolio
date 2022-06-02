@@ -12,7 +12,7 @@ module.exports = {
         sans: ['Roboto', 'sans-serif'],
       },
       colors: {
-        gray:{
+        gray: {
           100: '#f5f5f5',
           200: '#eeeeee',
           300: '#e0e0e0',
@@ -23,7 +23,7 @@ module.exports = {
           800: '#323232',
           900: '#010100',
           1000: '#0a0e0e',
-        }
+        },
       },
       minHeight: {
         md: '500px',

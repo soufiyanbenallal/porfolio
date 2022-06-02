@@ -7,5 +7,5 @@
 }
 
 .container-fluid {
-  @apply mx-auto px-4 w-full lg:px-12 
+  @apply mx-auto px-4 w-full lg:px-12;
 }

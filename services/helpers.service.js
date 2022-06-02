@@ -1,3 +1,3 @@
 export const something = () => {
-    return true;
-}
+  return true;
+};

@@ -8,6 +8,7 @@ import Layout from '../layouts/Layout';
 import CatArt from '../components/CatArt';
 import Header from '../components/Header';
 import DotsSvg from '../components/DotsSvg';
+import GetInTouch from '../components/GetInTouch';
 
 export default function Home() {
   return (
@@ -29,17 +30,20 @@ export default function Home() {
       <Layout>
         <div className="bg-split bg-gray-100 dark:bg-gray-900 inline-block w-full">
           <DotsSvg />
-          <Header /> 
-          <section className="container-fluid px-4 overflow-hidden relative flex items-center md:-mt-28">
-            <div className="absolute md:-right-32 right-0 top-0 z-0 w-full max-w-fit overflow-hidden">
-              <CatArt className='text-gray-600 dark:text-gray-800 w-full opacity-50' eyeClassName="text-gray-600 dark:text-gray-600 fill-current" />
+          <Header />
+          <section className="container-fluid px-4 overflow-hidden  flex items-center md:-mt-32">
+            <div className="absolute right-0 top-0 z-0 w-screen h-screen overflow-hidden">
+              <CatArt
+                className="text-gray-600 dark:text-gray-800 w-full opacity-50"
+                eyeClassName="text-gray-600 dark:text-gray-600 fill-current"
+              />
             </div>
             <div className="relative z-10 py-32 text-center md:text-left">
               <h1 className="dark:text-gray-200 text-6xl md:text-8xl font-extrabold space-y-4 mb-12 relative mx-auto flex flex-col items-center md:items-start justify-center">
-                <div className='tracking-wide'>
-                  Defining
+                <div className="tracking-wide">Defining</div>
+                <div className="text-stroke text-[2rem] md:text-[5rem] tracking-wider">
+                  <span>The Future of</span> <span>Apps</span>{' '}
                 </div>
-                <div className='text-stroke text-[2rem] md:text-[5rem] tracking-wider'><span>The Future of</span> <span>Apps</span> </div>
               </h1>
               <p className="font-light dark:text-gray-500 max-w-sm text-shadow">
                 Hello, I&apos;m Soufiyan Frontend developer, I produce elegant,
@@ -52,6 +56,7 @@ export default function Home() {
           {/* <RecentWork inverse /> */}
           <ServicesSection />
           {/* <HeroSection /> */}
+          <GetInTouch />
         </div>
       </Layout>
     </>

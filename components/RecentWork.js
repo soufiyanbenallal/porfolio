@@ -1,9 +1,12 @@
 import React from 'react';
 
-export default function RecentWork({inverse}) {
+export default function RecentWork({ inverse }) {
   return (
     <section className="relative py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
-      <div className="sticky top-0 h-fit sm:py-16 lg:py-0 " style={{order:inverse ? 0 : 1}}>
+      <div
+        className="sticky top-0 h-fit sm:py-16 lg:py-0 "
+        style={{ order: inverse ? 0 : 1 }}
+      >
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
           <div
             aria-hidden="true"
@@ -47,20 +50,20 @@ export default function RecentWork({inverse}) {
           {/* Testimonial card*/}
           <div className="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden z-10">
             <img
-              className="absolute inset-0 h-full w-full object-cover"
-              src="https://images.unsplash.com/photo-1521510895919-46920266ddb3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&fp-x=0.5&fp-y=0.6&fp-z=3&width=1440&height=1440&sat=-100"
+              className="absolute inset-0 h-full w-full object-cover bg-black"
+              src="/wevente-logo.png"
               alt=""
             />
-            <div className="absolute inset-0 bg-indigo-700 mix-blend-multiply" />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-indigo-900 opacity-60" />
+            <div className="absolute inset-0 bg-indigo-400 opacity-30 mix-blend-multiply" />
+            {/* <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-indigo-500 opacity-20" /> */}
             <div className="relative px-8">
-              <div>
+              {/* <div>
                 <img
                   className="h-12"
                   src="https://tailwindui.com/img/logos/workcation.svg?color=white"
                   alt="Workcation"
                 />
-              </div>
+              </div> */}
               <blockquote className="mt-8">
                 <div className="relative text-lg font-medium text-white md:flex-grow">
                   <svg
@@ -72,15 +75,14 @@ export default function RecentWork({inverse}) {
                     <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                   </svg>
                   <p className="relative">
-                    Tincidunt integer commodo, cursus etiam aliquam neque, et.
-                    Consectetur pretium in volutpat, diam. Montes, magna
-                    cursus nulla feugiat dignissim id lobortis amet.
+                    Offers you a large collection of electronics intended for
+                    your needs with the price which is appropriate to you.
                   </p>
                 </div>
 
                 <footer className="mt-4">
                   <p className="text-base font-semibold text-indigo-200">
-                    Sarah Williams, CEO at Workcation
+                    Benallal soufiyan, CEO of Wevente
                   </p>
                 </footer>
               </blockquote>
@@ -89,27 +91,29 @@ export default function RecentWork({inverse}) {
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0" style={{order: inverse ? 1 : 0}}>
+      <div
+        className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0"
+        style={{ order: inverse ? 1 : 0 }}
+      >
         {/* Content area */}
         <div className="pt-12 sm:pt-16 lg:pt-20">
           <h2 className="text-3xl text-gray-800 dark:text-gray-100 font-extrabold tracking-tight sm:text-4xl">
-            On a mission to empower teams
+            Some Things I&apos;ve Built
           </h2>
           <div className="mt-6 text-gray-500 space-y-6">
-            <p className="text-lg">
-              Sagittis scelerisque nulla cursus in enim consectetur quam.
-              Dictum urna sed consectetur neque tristique pellentesque.
-              Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc
-              nisl netus morbi vel porttitor vitae ut. Amet vitae fames
-              senectus vitae.
+            <h5 className="text-indigo-500">Feature project</h5>
+            <p className="text-base ">
+              Ecommerce website for a international business. based on shopify
+              as a backend managing system. The idea of this project is to build
+              highly flexible ecommerce that can be used for any business. and
+              easily manage the whole process, from the backend to the frontend.
             </p>
-            <p className="text-base leading-7">
-              Sollicitudin tristique eros erat odio sed vitae, consequat
-              turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-              eu viverra donec ut volutpat donec laoreet quam urna.
-              Sollicitudin tristique eros erat odio sed vitae, consequat
-              turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-              eu viverra donec ut volutpat donec laoreet quam urna.
+            <p className="text-base ">
+              You can access to this project by clicking on the button below.
+            </p>
+            <p>
+              {' '}
+              The password is <b>soufiyan</b>
             </p>
           </div>
         </div>
@@ -117,10 +121,14 @@ export default function RecentWork({inverse}) {
         {/* Stats section */}
         <div className="mt-10">
           <div className="mt-10">
-            <a href="#" className="text-base font-medium text-indigo-600">
+            <a
+              href="https://wevente.myshopify.com/"
+              className="text-base font-medium text-indigo-600"
+            >
               {' '}
-              Learn more about how we&apos;re changing the world{' '}
-              <span aria-hidden="true">&rarr;</span>{' '}
+              Learn more about Wevente <span aria-hidden="true">
+                &rarr;
+              </span>{' '}
             </a>
           </div>
         </div>
