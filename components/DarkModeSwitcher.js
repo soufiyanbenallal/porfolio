@@ -61,7 +61,7 @@ export default function DarkModeSwitcher() {
     <button
       onClick={toggleDarkMode}
       className={`${
-        !enabled ? 'text-gray-900 ' : 'text-indigo-500 '
+        !enabled ? 'text-gray-900 ' : 'text-gray-100 '
       } relative inline-flex items-center`}
     >
       {enabled ? (

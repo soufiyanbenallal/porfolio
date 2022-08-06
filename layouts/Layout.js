@@ -24,7 +24,17 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <main className="wrapper rounded-b-xl overflow-hidden">{children}</main>
+      <main className="wrapper rounded-b-xl overflow-hidden">
+        <div className="bg-lines">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        
+        {children}
+        </main>
       <Footer />
     </>
   );

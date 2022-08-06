@@ -1,6 +1,6 @@
 import React from 'react';
 // import { motion, useTransform, useViewportScroll } from "framer-motion"
-import { Card } from '../motions/OnScroll';
+import { Card } from '../../../motions/OnScroll';
 export default function ServicesSection() {
   return (
     <section className="container grid grid-cols-1 gap-20 py-24 md:grid-cols-2 lg:grid-cols-3 rounded-b-xl overflow-hidden">

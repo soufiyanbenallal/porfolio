@@ -12,7 +12,7 @@ export default function RecentWork({ inverse }) {
             aria-hidden="true"
             className="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen"
           >
-            <div className="absolute inset-y-0 right-1/2 w-full dark:bg-gray-1000 bg-gray-400  rounded-r-3xl lg:right-72" />
+            <div className="absolute inset-y-0 right-1/2 w-full dark:bg-gray-1000 bg-gray-200  rounded-r-3xl lg:right-72" />
 
             <svg
               className="absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12 opacity-10"
