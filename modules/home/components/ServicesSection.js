@@ -5,7 +5,7 @@ export default function ServicesSection() {
   return (
     <section className="container grid grid-cols-1 gap-20 py-24 md:grid-cols-2 lg:grid-cols-3 rounded-b-xl overflow-hidden">
       <article className="col-span-1 md:col-span-2 lg:col-span-3">
-        <h3 className="text-4xl dark:text-gray-100">Solutions for you</h3>
+        <h3 className="text-4xl dark:text-gray-100">The why how i work</h3>
       </article>
       <Card>
         <svg
@@ -24,12 +24,13 @@ export default function ServicesSection() {
           />
         </svg>
         <h3 className="mb-3 text-lg font-medium leading-tight text-gray-900">
-          Unify your payments stack
+          Project structure
         </h3>
         <p className="text-base leading-relaxed text-gray-600">
-          Manage all your online and offline sales in one place with a single
-          integration, simplifying reporting and reconciliation. Terminal works
-          seamlessly with Payments, Connect, and Billing.
+          Building structural project is the first step to start any project.
+          In which case i more likley to integrate design system to my projects.
+          As core that contains all the services, components and styles that are used.
+          as modules that contains all the pages and components that are used.
         </p>
       </Card>
       <Card>
@@ -55,12 +56,15 @@ export default function ServicesSection() {
           />
         </svg>
         <h3 className="mb-3 text-lg font-medium leading-tight text-gray-900">
-          Own your in-store experience
+          Preferable tools
         </h3>
         <p className="text-base leading-relaxed text-gray-600">
-          Provide a seamless customer experience across channels, like reserving
-          online and picking up in store. Our SDKs make it easy to integrate
-          into your own mobile and web applications to accept in-store payments.
+          I prefer to use the tools that i'm familiar with, and i'm always.
+          Typescript for the type safety and the intellisense.
+          React for the component based architecture and the reusability.
+          Redux for the state management and the scalability, and maybe recoil for future.
+          Tailwindcss for the utility first approach and the customizability.
+          Framer motion for the animations and the interactions.
         </p>
       </Card>
       <Card>
@@ -80,12 +84,12 @@ export default function ServicesSection() {
           />
         </svg>
         <h3 className="mb-3 text-lg font-medium leading-tight text-gray-900">
-          Grow your platforms revenue
+          UX/UI Design
         </h3>
         <p className="text-base leading-relaxed text-gray-600">
-          Add in-person payments to your platform or marketplace. Using Terminal
-          with Connect, you can onboard users for online and in-person payments,
-          and unify their payouts across channels.
+          I'm a self taught designer, i'm always trying to improve my skills.
+          I'm using figma for the prototyping and the design.
+          I'm using adobe illustrator for the vector editing and the design.
         </p>
       </Card>
     </section>

@@ -1,7 +1,7 @@
 import React from 'react';
 export default function GetInTouch() {
   return (
-    <div className="">
+    <div className="mb-40">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:py-32 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase"></h2>

@@ -36,8 +36,8 @@ export default function HeroSection() {
         
       </div>
       <div className="container mt-12">
-      <small>Defining The Future of Apps</small>
-        <p className="text-2xl w-full dark:text-gray-500  text-shadow">
+      {/* <small>Defining The Future of Apps</small> */}
+        <p className="text-3xl tracking-wider w-full dark:text-gray-300 text-center">
           I&apos;m Frontend developer, I produce elegant,
           performant and accessible digital experciences UI/ UX, please
           take a look around
