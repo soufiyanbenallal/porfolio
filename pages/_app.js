@@ -1,53 +1,57 @@
+import React from 'react';
 /* eslint-disable react/prop-types */
 /* eslint-disable react/react-in-jsx-scope */
 // import 'tailwindcss/tailwind.css'
 import '../styles/globals.css';
 import '../styles/style.css';
 
+// import {
+//   AnimatePresence,
+//   domAnimation, LazyMotion,
+//   m
+// } from "framer-motion"
+// const fadeBack = {
+//   name: "Fade Back",
+//   variants: {
+//     initial: {
+//       opacity: 0,
+//       scale: 0.8
+//     },
+//     animate: {
+//       opacity: 1,
+//       scale: 1
+//     },
+//     exit: {
+//       opacity: 0,
+//       scale: 0.4
+//     }
+//   },
+//   transition: {
+//     duration: 0.7
+//   }
+// };
 function MyApp({ Component, pageProps }) {
+  // const startIndex = 0;
+  // const [animation, setAnimation] = useState(fadeBack);
+  // const [exitBefore, setExitBefore] = useState(false);
+
   return <Component {...pageProps} />;
+
+//   return  <LazyMotion features={domAnimation}>
+//   <AnimatePresence >
+//     <m.div
+//       key={router.route.name}
+//       className="page-wrap"
+//       initial="initial"
+//       animate="animate"
+//       exit="exit"
+//       variants={fadeBack.variants}
+//       transition={fadeBack.transition}
+//     >
+//       <Component {...pageProps} />
+//     </m.div>
+//   </AnimatePresence>
+// </LazyMotion>;
 }
 
 export default MyApp;
-// /* eslint-disable react/prop-types */
-// // import 'tailwindcss/tailwind.css'
-// import React,{createContext} from "react";
-// import App from "next/app";
-// import '../styles/globals.css';
-// import '../styles/style.css';
-// import { Head } from "next/document";
-// export const GlobalContext = createContext({});
-// function MyApp({ Component, pageProps }) {
-//   // const { global = {} } = pageProps;
-
-//   return (
-//     <>
-//       <Head>
-//         {/* <link
-//           rel="shortcut icon"
-//           href={getStrapiMedia(global.attributes.favicon)}
-//         /> */}
-//       </Head>
-//       {/* <GlobalContext.Provider value={global}>
-//       </GlobalContext.Provider> */}
-//         <Component {...pageProps} />
-//     </>
-//   );
-// }
-// MyApp.getInitialProps = async (ctx) => {
-//   // Calls page's `getInitialProps` and fills `appProps.pageProps`
-//   const appProps = await App.getInitialProps(ctx);
-//   // Fetch global site settings from Strapi
-//   // const globalRes = await fetch("/global", {
-//   //   populate: {
-//   //     favicon: "*",
-//   //     defaultSeo: {
-//   //       populate: "*",
-//   //     },
-//   //   },
-//   // });
-//   // Pass the data to our page via props
-//   // return { ...appProps, pageProps: { global: globalRes.data } };
-//   return { ...appProps };
-// };
-// export default MyApp;

@@ -2,11 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import DarkModeSwitcher from './DarkModeSwitcher';
 import Logo from './Logo';
-import SocialMedia from './SocialMedia';
+// import SocialMedia from './SocialMedia';
+import { FADE_ANIM } from '../motions/home';
+import { motion } from "framer-motion";
 
 export default function Header() {
   return (
-    <header className="py-4 absolute top-0 left-0 w-full z-10">
+    <motion.header {...FADE_ANIM} className="py-4 absolute top-0 left-0 w-full z-10">
       <nav className="container-fluid flex justify-between items-center py-4">
         <Link href="/">
           <a className="max-w-max">
@@ -30,6 +32,6 @@ export default function Header() {
           <DarkModeSwitcher />
         </div>
       </nav>
-    </header>
+    </motion.header>
   );
 }

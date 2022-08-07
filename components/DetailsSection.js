@@ -47,7 +47,7 @@ export default function DetailsSection() {
             <SocialMedia className="text-gray-100 dark:text-gray-900" />
           </div>
           <div className="w-full flex-1 px-12 flex flex-col items-center py-10">
-            <div className="mb-3 w-24 h-24 rounded-full bg-gray-200  flex items-center justify-center cursor-pointer text-indigo-700">
+            <div className="mb-3 w-24 h-24 rounded-full bg-gray-200  flex items-center justify-center cursor-pointer text-red-700">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-tabler icon-tabler-stack"

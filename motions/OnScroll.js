@@ -3,7 +3,7 @@ import { motion, useViewportScroll, useTransform } from 'framer-motion';
 
 export const Card = ({ children }) => {
   const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0.5, 1], [120, 0]);
+  const scale = useTransform(scrollYProgress, [0.5, 1], [400, 0]);
   const opacity = 1; // useTransform(scrollYProgress, [0.5, 1], [0, 1]);
 
   return (

@@ -1,5 +1,6 @@
 import React from 'react'
-import DotsSvg from '../../components/DotsSvg'
+// import Box from '../../components/Box'
+// import DotsSvg from '../../components/DotsSvg'
 import GetInTouch from '../../components/GetInTouch'
 import Header from '../../components/Header'
 import HeroSection from './components/HeroSection'
@@ -11,7 +12,10 @@ export default function HomeView() {
     <div className="bg-gray-100 dark:bg-gray-900 inline-block w-full">
         {/* <DotsSvg /> */}
         <Header />
-        <HeroSection />        
+        <HeroSection />   
+        {/* <Box num={1} />
+        <Box num={2} />
+        <Box num={3} />      */}
         <RecentWork />
         {/* <RecentWork inverse /> */}
         <ServicesSection />

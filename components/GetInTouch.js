@@ -4,7 +4,7 @@ export default function GetInTouch() {
     <div className="mb-40">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:py-32 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase"></h2>
+          <h2 className="text-base font-semibold text-red-600 tracking-wide uppercase"></h2>
           <p className="mt-1 text-4xl font-extrabold text-gray-900 dark:text-gray-100 sm:text-5xl sm:tracking-tight lg:text-6xl">
             Get In Touch
           </p>
@@ -15,7 +15,7 @@ export default function GetInTouch() {
           </p>
           <a
             href="mailto:benallalsoufiane1@gmail.com?subject=🤝%20Project%20info.%20Let's%20talk"
-            className="mt-6 inline-flex items-center px-6 py-2 border border-transparent text-base leading-4 font-medium rounded-md text-indigo-700 dark:text-indigo-200 dark:bg-indigo-900 bg-indigo-100 hover:bg-indigo-200 dark:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="mt-6 inline-flex items-center px-6 py-2 border border-transparent text-base leading-4 font-medium rounded-md text-red-700 dark:text-red-200 dark:bg-red-900 bg-red-100 hover:bg-red-200 dark:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
           >
             Say hello
           </a>

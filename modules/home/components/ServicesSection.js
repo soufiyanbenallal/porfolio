@@ -13,7 +13,7 @@ export default function ServicesSection() {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="w-12 h-12 mb-4 text-indigo-700"
+          className="w-12 h-12 mb-4 text-red-700"
           aria-hidden="true"
         >
           <path
@@ -39,7 +39,7 @@ export default function ServicesSection() {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="w-12 h-12 mb-4 text-indigo-700"
+          className="w-12 h-12 mb-4 text-red-700"
           aria-hidden="true"
         >
           <path
@@ -73,7 +73,7 @@ export default function ServicesSection() {
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          className="w-12 h-12 mb-4 text-indigo-700"
+          className="w-12 h-12 mb-4 text-red-700"
           aria-hidden="true"
         >
           <path
