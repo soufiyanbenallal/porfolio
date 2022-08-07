@@ -29,11 +29,11 @@ export default function Layout({ children }) {
       <main className="wrapper rounded-b-xl overflow-hidden">
         <motion.div {...FADE_ANIM}>
         <div className="bg-lines">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div><span></span></div>
+          <div><span></span></div>
+          <div><span></span></div>
+          <div><span></span></div>
+          <div><span></span></div>
         </div>
         </motion.div>
         

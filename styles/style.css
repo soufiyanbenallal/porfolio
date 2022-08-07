@@ -101,7 +101,6 @@ body.tight .wrapper {
   z-index: 10;
   background-size: 100%;
   background-repeat: repeat;
-  opacity: 0.2;
   display: flex;
   justify-content: space-around;
 }
@@ -110,10 +109,45 @@ body.tight .wrapper {
   width: 1px;
   height: 100%;
   background: rgb(0,0,0);
-  background: -moz-linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(150, 150, 150, 0.9) 38%, rgba(136,136,136,1) 100%);
-  background: -webkit-linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(150, 150, 150, 0.9) 38%, rgba(136,136,136,1) 100%);
-  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(150, 150, 150, 0.9) 38%, rgba(136,136,136,1) 100%);
+  position: relative;
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(164 164 164 / 15%) 38%, rgb(140 140 140 / 16%) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#777777",GradientType=1);
+}
+.bg-lines>div>span {
+  position: absolute;
+  width: 5px;
+  height: 60px;
+  top: -100%;
+  right: -2px;
+  background: linear-gradient(to bottom,transparent,#ff0040be);
+  animation: animate1 6s linear infinite;
+  filter: blur(3px);
+}
+.bg-lines>div:nth-child(1) span{
+  animation-delay: 0s;
+}
+.bg-lines>div:nth-child(2) span{
+  animation-delay: 2s;
+}
+.bg-lines>div:nth-child(3) span{
+  animation-delay: 3.5s;
+}
+.bg-lines>div:nth-child(4) span{
+  animation-delay: 5.5s;
+}
+@keyframes animate1 {
+  0% {
+    top: -100%;
+    opacity: 1;
+  }
+  50%,70% {
+    top: 70%;
+    opacity: 1;
+  }
+  70%,100% {
+    top: 100%;
+    opacity: 0;
+  }
 }
 
 
