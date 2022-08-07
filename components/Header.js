@@ -17,7 +17,7 @@ export default function Header() {
         </Link>
         <div className="hidden md:flex items-center space-x-6">
           <a
-            href="#contact"
+            href="mailto:benallalsoufiane1@gmail.com?subject=🤝%20Project%20info.%20Let's%20talk"
             className="fill-current dark:text-gray-100 text-gray-900"
           >
             Let&apos;s talk
