@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function RecentWork({ inverse }) {
   return (
-    <section className="relative py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
+    <section className="paralax relative py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
       <div
         className="sticky top-0 h-fit sm:py-16 lg:py-0 "
         style={{ order: inverse ? 0 : 1 }}

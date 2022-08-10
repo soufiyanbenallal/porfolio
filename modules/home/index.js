@@ -3,6 +3,7 @@ import React from 'react'
 // import DotsSvg from '../../components/DotsSvg'
 import GetInTouch from '../../components/GetInTouch'
 import Header from '../../components/Header'
+import { Box } from '../../motions/OnScroll'
 import HeroSection from './components/HeroSection'
 import RecentWork from './components/RecentWork'
 import ServicesSection from './components/ServicesSection'
@@ -16,9 +17,10 @@ export default function HomeView() {
         {/* <Box num={1} />
         <Box num={2} />
         <Box num={3} />      */}
+
+        <ServicesSection />
         <RecentWork />
         {/* <RecentWork inverse /> */}
-        <ServicesSection />
         <GetInTouch />
     </div>
   )

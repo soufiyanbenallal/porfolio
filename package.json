@@ -14,8 +14,9 @@
   "dependencies": {
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.1",
+    "@motionone/utils": "^10.13.2",
     "axios": "^0.27.2",
-    "framer-motion": "^4.1.17",
+    "framer-motion": "6.5.1",
     "lottie-react": "^2.2.1",
     "lottie-web": "^5.9.4",
     "next": "latest",

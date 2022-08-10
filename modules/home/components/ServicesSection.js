@@ -1,14 +1,20 @@
 import React from 'react';
 // import { motion, useTransform, useViewportScroll } from "framer-motion"
-import { Card } from '../../../motions/OnScroll';
+import Box, { Card, AnimatedTextCharacter, AnimatedTextWord } from '../../../components/Box'
 export default function ServicesSection() {
   return (
-    <section className="container grid grid-cols-1 gap-20 py-24 md:grid-cols-2 lg:grid-cols-3 rounded-b-xl overflow-hidden">
-      <article className="col-span-1 md:col-span-2 lg:col-span-3">
-        <h3 className="text-4xl dark:text-gray-100">The way how i work</h3>
-      </article>
-      <Card>
-        <svg
+    <section className="h-screen container overflow-hidden flex items-center">
+      {/* <Box /> */}
+<div className="grid grid-cols-1 gap-12  md:grid-cols-2 lg:grid-cols-3 rounded-b-xl ">
+        <article className="col-span-1 md:col-span-2 lg:col-span-3">
+      <Card >
+      {/* <h3 className="text-4xl dark:text-gray-100">The way how i work</h3> */}
+    <AnimatedTextWord text='The way how i work'/>
+      </Card>
+    </article>
+      
+    <Card >
+        <svg    
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -23,7 +29,7 @@ export default function ServicesSection() {
             d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
           />
         </svg>
-        <h3 className="mb-3 text-lg font-medium leading-tight text-gray-900">
+        <h3 className="mb-3 text-lg font-medium leading-tight text-gray-900 dark:text-gray-300">
           Project structure
         </h3>
         <p className="text-base leading-relaxed text-gray-600">
@@ -55,7 +61,7 @@ export default function ServicesSection() {
             d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
           />
         </svg>
-        <h3 className="mb-3 text-lg font-medium leading-tight text-gray-900">
+        <h3 className="mb-3 text-lg font-medium leading-tight text-gray-900 dark:text-gray-300">
           Preferable tools
         </h3>
         <p className="text-base leading-relaxed text-gray-600">
@@ -83,7 +89,7 @@ export default function ServicesSection() {
             d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20"
           />
         </svg>
-        <h3 className="mb-3 text-lg font-medium leading-tight text-gray-900">
+        <h3 className="mb-3 text-lg font-medium leading-tight text-gray-900 dark:text-gray-300">
           UX/UI Design
         </h3>
         <p className="text-base leading-relaxed text-gray-600">
@@ -92,6 +98,7 @@ export default function ServicesSection() {
           I'm using adobe illustrator for the vector editing and the design.
         </p>
       </Card>
+      </div>
     </section>
   );
 }

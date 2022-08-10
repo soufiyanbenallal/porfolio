@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { DISAPEAR_ANIM, FADE_ANIM, NAME_ANIM } from '../../../motions/home';
+import { ParallaxText } from '../../../motions/OnScroll';
 
 
 
 export default function HeroSection() {
   return (
-    <section className="container-fluid px-4 w-full h-screen flex flex-col justify-center i2tems-center">
+    <section className="paralax container-fluid px-4 w-full h-screen flex flex-col justify-center i2tems-center">
       {/* <div className="absolute right-0 top-0 z-0 w-screen h-screen overflow-hidden">
          <CatArt
           className="text-gray-600 dark:text-gray-800 w-full opacity-50"
@@ -57,13 +58,24 @@ export default function HeroSection() {
         </div>
         
       </div>
-      <motion.div  {...FADE_ANIM} className="container mt-12">
+      <motion.div  {...FADE_ANIM} className="container mt-24">
       {/* <small>Defining The Future of Apps</small> */}
-        <p className="text-3xl tracking-wider w-full dark:text-gray-300 text-center">
-          I&apos;m Frontend developer, I produce elegant,
-          performant and accessible digital experciences UI/ UX, please
-          take a look around
-        </p>
+      <ParallaxText  baseVelocity={1} >
+          <p className="text-3xl tracking-wider w-full dark:text-gray-300 text-center">
+            I&apos;m Frontend developer, I produce elegant,
+            performant and accessible digital experciences UI/ UX, please
+            take a look around
+          </p>
+
+      </ParallaxText>
+      <ParallaxText baseVelocity={-1}>
+      <p className="text-3xl tracking-wider w-full dark:text-gray-300 text-center">
+            I&apos;m Frontend developer, I produce elegant,
+            performant and accessible digital experciences UI/ UX, please
+            take a look around
+          </p>
+      </ParallaxText>
+
       </motion.div>
     </section>
   );
