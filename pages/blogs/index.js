@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { get } from '../../services/api.service';
-import { isUrlValid } from 'simple-form-validations';
 import Layout from '../../layouts/Layout';
 import Header from '../../components/Header';
 
@@ -42,13 +41,12 @@ export default function Index() {
    */
   useEffect(() => {
     // console.log('process.env.API_URL', process.env.NEXT_PUBLIC_ENV_API_URL);
-    console.log('isUrlValid :', isUrlValid('https://www.google.com'));
     // fetchArticles()
     return () => {};
   }, []);
 
   return (
-    <Layout>
+    <Layout >
       <HeroContent>
         <div className="pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
           <div className="relative max-w-lg mx-auto divide-y-2 divide-gray-400 dark:divide-gray-800 lg:max-w-7xl">
@@ -121,14 +119,14 @@ export default function Index() {
 // eslint-disable-next-line react/prop-types
 function HeroContent({ children }) {
   return (
-    <div className="bg-gray-100 dark:bg-gray-900">
+    <div className="bg-gray-100 dark:bg-gray-900 ">
       <div className="relative overflow-hidden">
         <Header />
 
-        <div className="relative pt-12">
+        <div className="relative pt-24">
           <div className="absolute inset-0 flex flex-col" aria-hidden="true">
             <div className="flex-1" />
-            <div className="flex-1 w-full dark:bg-gray-1000 bg-gray-300" />
+            <div className="flex-1 w-full dark:bg-gray-1000 bg-gray-200" />
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <div className="absolute top-1/2 left-1/2 w-full text-center transform -translate-x-1/2 -translate-y-1/2 z-10">
@@ -148,7 +146,7 @@ function HeroContent({ children }) {
           </div>
         </div>
       </div>
-      <div className="dark:bg-gray-1000 bg-gray-300">
+      <div className="dark:bg-gray-1000 bg-gray-200">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <h2 className="text-center text-gray-500 text-sm font-semibold uppercase tracking-wide">
             Trusted by over 26,000 forward-thinking companies

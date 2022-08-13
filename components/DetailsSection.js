@@ -1,5 +1,6 @@
 import React from 'react';
 import SocialMedia from './SocialMedia';
+import GetInTouch from './GetInTouch';
 
 export default function DetailsSection() {
   return (
@@ -47,6 +48,9 @@ export default function DetailsSection() {
             <SocialMedia className="text-gray-100 dark:text-gray-900" />
           </div>
           <div className="w-full flex-1 px-12 flex flex-col items-center py-10">
+            <GetInTouch />
+          </div>
+          <div className="w-full flex-1 px-12 flex flex-col items-center py-10">
             <div className="mb-3 w-24 h-24 rounded-full bg-gray-200  flex items-center justify-center cursor-pointer text-red-700">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -91,26 +95,7 @@ export default function DetailsSection() {
               </div>
             </div>
           </div>
-          <div className="w-full flex-1 flex-col flex justify-center items-center px-12 py-8">
-            <h2 className="text-center text-2xl text-gray-800 font-medium tracking-normal">
-              88
-            </h2>
-            <h2 className="text-center text-sm text-gray-600 font-normal mt-2 mb-4 tracking-normal">
-              Reviews
-            </h2>
-            <h2 className="text-center text-2xl text-gray-800 font-medium tracking-normal">
-              30
-            </h2>
-            <h2 className="text-center text-sm text-gray-600 font-normal mt-2 mb-4 tracking-normal">
-              Projects
-            </h2>
-            <h2 className="text-center text-2xl text-gray-800 font-medium tracking-normal">
-              24
-            </h2>
-            <h2 className="text-center text-sm text-gray-600 font-normal mt-2 mb-4 tracking-normal">
-              Approved
-            </h2>
-          </div>
+       
         </div>
         {/* Card code block end */}
       </div>

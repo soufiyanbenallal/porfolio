@@ -1,8 +1,9 @@
 import React from 'react';
+import Box from '../../../components/Box';
 
 export default function RecentWork({ inverse }) {
   return (
-    <section className="paralax relative py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
+    <section className="h-screen relative py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
       <div
         className="sticky top-0 h-fit sm:py-16 lg:py-0 "
         style={{ order: inverse ? 0 : 1 }}
@@ -119,6 +120,8 @@ export default function RecentWork({ inverse }) {
         </div>
 
         {/* Stats section */}
+        <Box>
+
         <div className="mt-10">
           <div className="mt-10">
             <a
@@ -132,6 +135,8 @@ export default function RecentWork({ inverse }) {
             </a>
           </div>
         </div>
+        </Box>
+
       </div>
     </section>
   );
