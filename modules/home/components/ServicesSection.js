@@ -6,11 +6,12 @@ export default function ServicesSection() {
     <section className="h-screen container overflow-hidden flex items-center">
       {/* <Box /> */}
 <div className="grid grid-cols-1 gap-12  md:grid-cols-2 lg:grid-cols-3 rounded-b-xl ">
-        <article className="col-span-1 md:col-span-2 lg:col-span-3">
-      <Card >
+
+        <article className="col-span-1 md:col-span-2 lg:col-span-3 h-80">
+  <Box>
       {/* <h3 className="text-4xl dark:text-gray-100">The way how i work</h3> */}
     <AnimatedTextWord text='The way how i work'/>
-      </Card>
+  </Box>
     </article>
       
     <Card >

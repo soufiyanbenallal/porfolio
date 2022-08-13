@@ -150,7 +150,7 @@ export function Card({children}) {
   // <Box>
 
       <motion.div
-        className="bg-gray-1000 p-7 rounded-3xl"
+        className="dark:bg-gray-1000 bg-gray-200 p-7 rounded-3xl"
         style={{ y: y2}}
         >
       {children}
