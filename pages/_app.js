@@ -1,4 +1,5 @@
 import React from 'react';
+import Layout from '../layouts/Layout';
 /* eslint-disable react/prop-types */
 /* eslint-disable react/react-in-jsx-scope */
 // import 'tailwindcss/tailwind.css'
@@ -35,8 +36,9 @@ function MyApp({ Component, pageProps }) {
   // const [animation, setAnimation] = useState(fadeBack);
   // const [exitBefore, setExitBefore] = useState(false);
 
-  return <Component {...pageProps} />;
-
+  return <Layout>
+        <Component {...pageProps} />
+      </Layout>
 //   return  <LazyMotion features={domAnimation}>
 //   <AnimatePresence >
 //     <m.div

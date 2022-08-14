@@ -114,7 +114,7 @@ export const AnimatedTextCharacter = ({ text }) => {
   );
 };
 
-export default function Box({ children }){
+export default function Box({ children, className }){
 
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -129,7 +129,7 @@ export default function Box({ children }){
 
   return (
     <motion.div
-      className="w-full"
+      className={className ? className : "w-full"}
       ref={ref}
       variants={boxVariant}
       initial="hidden"
@@ -140,17 +140,17 @@ export default function Box({ children }){
   );
 };
 
-const h = 800// window.innerHeight
 
-export function Card({children}) {
+export function Card({children, className, num = 800}) {
+  const h = 900// window.innerHeight
   const { scrollY } = useViewportScroll();
-  const y2 = useTransform(scrollY, [0, h], [h, -200]);
+  const y2 = useTransform(scrollY, [0, h], [num, -200]);
 
   return (
   // <Box>
 
       <motion.div
-        className="dark:bg-gray-1000 bg-gray-200 p-7 rounded-3xl"
+        className={className ? className : "dark:bg-gray-1000 bg-gray-200 p-7 rounded-3xl"}
         style={{ y: y2}}
         >
       {children}

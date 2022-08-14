@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 // import { motion, useViewportScroll,useScroll, useTransform, useMotionValue, useVelocity, useSpring } from 'framer-motion';
 import {
   motion,
@@ -13,13 +13,13 @@ import {
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
 import { useInView } from 'react-intersection-observer';
-function useParallax(value, distance) {
+export function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
 
 
-export function ParallaxText({ children, baseVelocity = 100 } ) {
+export function ParallaxText({ children, baseVelocity = 100, className } ) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -66,13 +66,16 @@ export function ParallaxText({ children, baseVelocity = 100 } ) {
    */
   return (
     <div className="parallax">
-      <motion.div className="scroller" style={{ x }}>
-        <span>{children} </span>
+      <motion.div className={"scroller "+ className} style={{ x }}>
+        <span className='text-stroke text-4xl'>{children} </span>
+        <span className='text-stroke text-4xl'>{children} </span>
+        <span className='text-stroke text-4xl'>{children} </span>
+        <span className='text-stroke text-4xl'>{children} </span>
       </motion.div>
     </div>
   );
 }
-export const Cards = ({ children }) => {
+export const Cards = ({ children, num = 900 }) => {
   const control = useAnimation();
   const [ref, inView] = useInView();
   const { scrollYProgress } = useViewportScroll();
@@ -88,7 +91,7 @@ export const Cards = ({ children }) => {
 
   // const ref = useRef(null);
   // const { scrollYProgress } = useScroll({ target: ref });
-  const y = useTransform(scrollYProgress, [-2, 1], [900, 0]);
+  const y = useTransform(scrollYProgress, [-2, 1], [num, 0]);
   // const opacity = 1; // useTransform(scrollYProgress, [0.5, 1], [0, 1]);
   // const y = useParallax(scrollYProgress, 400);
   

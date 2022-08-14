@@ -1,5 +1,4 @@
 import React from 'react';
-import Box from '../../../components/Box';
 
 export default function RecentWork({ inverse }) {
   return (
@@ -120,7 +119,6 @@ export default function RecentWork({ inverse }) {
         </div>
 
         {/* Stats section */}
-        <Box>
 
         <div className="mt-10">
           <div className="mt-10">
@@ -135,7 +133,6 @@ export default function RecentWork({ inverse }) {
             </a>
           </div>
         </div>
-        </Box>
 
       </div>
     </section>

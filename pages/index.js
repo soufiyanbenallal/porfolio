@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import React from 'react';
-import Layout from '../layouts/Layout';
 import HomeView from '../modules/home';
 
 export default function Home() {
@@ -20,9 +19,7 @@ export default function Home() {
           rel="stylesheet"
         ></link>
       </Head>
-      <Layout>
-        <HomeView />
-      </Layout>
+      <HomeView />
     </>
   );
 }

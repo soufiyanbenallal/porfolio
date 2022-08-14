@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from "framer-motion";
 import Footer from '../components/Footer';
 import { FADE_ANIM } from '../motions/home';
+import Header from '../components/Header';
 function layoutAnimate() {
   const body = document.querySelector('body');
   document.addEventListener('scroll', () => {
@@ -27,13 +28,18 @@ export default function Layout({ children }) {
   return (
     <>
       <main className="wrapper rounded-b-xl overflow-hidden">
-        <motion.div {...FADE_ANIM}>
+        <Header />
+
+        <motion.div {...FADE_ANIM} >
         <div className="bg-lines">
+          <div className="container-lg">
+
           <div><span></span></div>
           <div><span></span></div>
           <div><span></span></div>
           <div><span></span></div>
           <div><span></span></div>
+          </div>
         </div>
         </motion.div>
         

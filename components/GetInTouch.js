@@ -1,13 +1,16 @@
 import React from 'react';
+import Logo from './Logo';
 export default function GetInTouch() {
   return (
-      <div className="max-w-7xl mx-auto py-6 sm:py-12">
+      <div className="py-6 sm:py-12">
         <div className="text-center">
-          <h2 className="text-base font-semibold text-red-600 tracking-wide uppercase"></h2>
-          <p className="mt-1 text-4xl font-extrabold dark:text-gray-900 text-gray-100 sm:text-5xl sm:tracking-tight lg:text-4xl mb-6">
+          <h2 className="text-center font-semibold text-red-600 tracking-wide uppercase">
+          <Logo className="relative -z-10 h-60 -mb-52 dark:text-white text-gray-900 mx-auto opacity-25" />
+          </h2>
+          <p className="text-4xl font-extrabold dark:text-gray-900 text-gray-100 sm:text-5xl sm:tracking-tight lg:text-4xl mb-6">
             Get In Touch
           </p>
-          <p className="max-w-xl mt-5 mx-auto text-sm text-gray-500">
+          <p className="text-gray-500 dark:text-gray-800 text-xs mb-8 text-center w-full">
             If you fancy a chat feel free to drop me a line, my
             inbox is always open. Whether you have a question or just want to
             say hi.

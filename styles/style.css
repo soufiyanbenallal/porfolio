@@ -35,11 +35,11 @@
 .wrapper {
   transform-origin: center bottom 0px;
   transition: all 0.5s ease 0s;
-  box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 16px 40px #28212347;
 }
 
 body.tight .wrapper {
-  transform: translateY(-60px) scale(0.85);
+  transform: translateY(-60px) scale(0.9);
   cursor: pointer;
 }
 
@@ -85,8 +85,16 @@ body.tight .wrapper {
 }
 .text-stroke {
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(148, 146, 146);
+  cursor: default;
+}
+.text-stroke:hover{
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-fill-color: #1b1b1b; /* Will override color (regardless of order) */
+}
+.dark .text-stroke:hover{
+  -webkit-text-fill-color: #c4c4c4; /* Will override color (regardless of order) */
 }
 .text-shadow {
   text-shadow: 0 0 1px #a1a1a1c6;
@@ -102,10 +110,13 @@ body.tight .wrapper {
   background-size: 100%;
   background-repeat: repeat;
   display: flex;
-  justify-content: space-around;
+}
+.bg-lines .container-lg{
+  display: flex;
+  justify-content: space-between;
 }
 
-.bg-lines>* {
+.bg-lines .container-lg>* {
   width: 1px;
   height: 100%;
   background: rgb(0,0,0);
@@ -113,29 +124,29 @@ body.tight .wrapper {
   background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(184, 184, 184, 0.199) 38%, rgb(140 140 140 / 16%) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#777777",GradientType=1);
 }
-.bg-lines>div>span {
+.bg-lines .container-lg>div>span {
   position: absolute;
   width: 5px;
   height: 60px;
   top: -100%;
   right: -2px;
   background: linear-gradient(to bottom,transparent,#ff0040be);
-  animation: animate1 6s linear infinite;
+  animation: lineAnimate 6s linear infinite;
   filter: blur(3px);
 }
-.bg-lines>div:nth-child(1) span{
+.bg-lines .container-lg>div:nth-child(1) span{
   animation-delay: 0s;
 }
-.bg-lines>div:nth-child(2) span{
+.bg-lines .container-lg>div:nth-child(2) span{
   animation-delay: 2s;
 }
-.bg-lines>div:nth-child(3) span{
+.bg-lines .container-lg>div:nth-child(3) span{
   animation-delay: 3.5s;
 }
-.bg-lines>div:nth-child(4) span{
+.bg-lines .container-lg>div:nth-child(4) span{
   animation-delay: 5.5s;
 }
-@keyframes animate1 {
+@keyframes lineAnimate {
   0% {
     top: -100%;
     opacity: 1;
@@ -215,6 +226,5 @@ animation-delay: -4s;
 }
 
 .parallax span {
-  display: block;
-  margin-right: 30px;
+  margin-right: 1rem;
 }

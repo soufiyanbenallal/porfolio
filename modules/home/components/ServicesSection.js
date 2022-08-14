@@ -1,6 +1,6 @@
 import React from 'react';
 // import { motion, useTransform, useViewportScroll } from "framer-motion"
-import Box, { Card, AnimatedTextCharacter, AnimatedTextWord } from '../../../components/Box'
+import Box, { Card, AnimatedTextWord } from '../../../components/Box'
 export default function ServicesSection() {
   return (
     <section className="h-screen container overflow-hidden flex items-center">
@@ -14,7 +14,7 @@ export default function ServicesSection() {
   </Box>
     </article>
       
-    <Card >
+      <Card num={850} >
         <svg    
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -40,7 +40,7 @@ export default function ServicesSection() {
           as modules that contains all the pages and components that are used.
         </p>
       </Card>
-      <Card>
+      <Card num={650}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -66,7 +66,7 @@ export default function ServicesSection() {
           Preferable tools
         </h3>
         <p className="text-base leading-relaxed text-gray-600">
-          I prefer to use the tools that i'm familiar with, and i'm always.
+          I prefer to use the tools that i&apos;m familiar with, and i&apos;m always.
           Typescript for the type safety and the intellisense.
           React for the component based architecture and the reusability.
           Redux for the state management and the scalability, and maybe recoil for future.
@@ -74,7 +74,7 @@ export default function ServicesSection() {
           Framer motion for the animations and the interactions.
         </p>
       </Card>
-      <Card>
+      <Card num={950}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -94,9 +94,9 @@ export default function ServicesSection() {
           UX/UI Design
         </h3>
         <p className="text-base leading-relaxed text-gray-600">
-          I'm a self taught designer, i'm always trying to improve my skills.
-          I'm using figma for the prototyping and the design.
-          I'm using adobe illustrator for the vector editing and the design.
+          I&apos;m a self taught designer, i&apos;m always trying to improve my skills.
+          I&apos;m using figma for the prototyping and the design.
+          I&apos;m using adobe illustrator for the vector editing and the design.
         </p>
       </Card>
       </div>

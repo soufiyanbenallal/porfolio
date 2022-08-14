@@ -60,12 +60,16 @@ const socialNavigation = [
 ];
 export default function SocialMedia({ className = '' }) {
   return (
-    <div className={'flex space-x-2 md:space-x-5 ' + className}>
+    <div className={className}>
+      <div className='relative space-y-3 md:space-y-5 w-6 -ml-3 pb-3'>
+
+      <div className="absolute top-full left-1/2 -translate-x-1/2 h-28 w-[1px] bg-[#8c8c8c29]"></div>
       {socialNavigation.map(({ name, icon: Icon, url }) => (
-        <a href={url} key={name} target="_blank" rel="noreferrer">
+        <a href={url} key={name} className="block w-4" target="_blank" rel="noreferrer">
           <Icon />
         </a>
       ))}
+      </div>
     </div>
   );
 }

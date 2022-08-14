@@ -39,17 +39,9 @@ export default function DarkModeSwitcher() {
       onClick={toggleDarkMode}
       className={`${
         !enabled ? 'text-gray-900 ' : 'text-gray-100 '
-      } relative inline-flex items-center`}
+      } relative inline-flex items-center -mr-[9px] `}
     >
-      {enabled ? (
-        <div className="flex justify-center items-center space-x-2">
-          <SunIcon /> <span>Light</span>
-        </div>
-      ) : (
-        <div className="flex justify-center items-center space-x-2">
-          <MoonIcon /> <span>Dark</span>
-        </div>
-      )}
+      {enabled ?  <SunIcon />: <MoonIcon />}
     </button>
   );
 }
