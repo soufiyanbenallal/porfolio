@@ -41,7 +41,7 @@ export default function HeroSection() {
                     bounceDamping: 10,
                     duration: 3,
                   }}
-                  className='dark:bg-red-600 bg-gray-100 absolute left-[9px] top-[28px]'></motion.span>
+                  className='bg-red-500 absolute left-[9px] top-[28px]'></motion.span>
                 {/* <motion.span {...LINE_ANIM} className='dark:bg-white bg-gray-100 absolute left-[9px] top-[28px]'></motion.span> */}
               </motion.span>
             </span>

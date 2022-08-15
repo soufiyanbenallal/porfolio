@@ -20,18 +20,13 @@ export default function DarkModeSwitcher() {
     });
   }, []);
   useEffect(() => {
-    if (
-      enabled ||
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
+    const isDark = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    if (isDark) {
       document.documentElement.classList.add('dark');
-      if (enabled === false) {
-        setEnabled(true);
-      }
+      enabled === false && setEnabled(true);
     } else {
       document.documentElement.classList.remove('dark');
+      enabled === true && setEnabled(false);
     }
   }, [enabled]);
   return (

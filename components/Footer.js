@@ -8,14 +8,13 @@ import { motion } from "framer-motion";
 export default function Footer() {
   return (
     <footer>
-
        <section className="container my-10 flex items-start justify-center min-h-[350px]">
         {/* Card is full width. Use in 12 col grid for best view. */}
         {/* Card code block start */}
         <motion.article {...FADE_ANIM} className="fixed left-0 bottom-28 z-50 w-full">
           <SocialMedia className="container-lg text-gray-600"/>
         </motion.article>
-        <article className="flex flex-col md:flex-row mx-auto rounded-xl md:divide-x divide-gray-500 divide-opacity-20">
+        <article className="flex flex-col md:flex-row mx-auto rounded-xl md:divide-x divide-gray-500 divide-opacity-20 z-50">
           <Box className="w-full flex-1 px-12 flex flex-col items-center py-10">
             <div className="w-24 h-24 mb-3 p-2 rounded-full  flex items-center justify-center">
               <img
@@ -80,7 +79,7 @@ export default function Footer() {
               Frontend Engineering Developer
             </h2>
             <p className="text-gray-600 text-sm tracking-normal font-normal mb-3 text-center">
-              Freelance / contact
+              Freelance / contracter
             </p>
             <p className="text-gray-500 dark:text-gray-800 text-xs tracking-normal font-normal mb-8 text-center w-full">
               I am a person who is always looking for new challenges and new
