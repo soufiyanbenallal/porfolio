@@ -46,7 +46,7 @@ export default function Index() {
   }, []);
 
   return (
-    <Layout >
+    < >
       <HeroContent>
         <div className="pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
           <div className="relative max-w-lg mx-auto divide-y-2 divide-gray-400 dark:divide-gray-800 lg:max-w-7xl">
@@ -112,7 +112,7 @@ export default function Index() {
           </div>
         </div>
       </HeroContent>
-    </Layout>
+    </>
   );
 }
 

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function Footer() {
   return (
     <footer>
-       <section className="container my-10 flex items-start justify-center min-h-[350px]">
+       <section className="container my-10 flex items-start justify-center min-h-[350px] overflow-hidden">
         {/* Card is full width. Use in 12 col grid for best view. */}
         {/* Card code block start */}
         <motion.article {...FADE_ANIM} className="fixed left-0 bottom-28 z-50 w-full">

@@ -32,5 +32,6 @@
   "prettier.jsxSingleQuote": true,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  },
+  "nuxt.isNuxtApp": false
 }
