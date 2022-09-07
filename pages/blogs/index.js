@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { get } from '../../services/api.service';
-import Layout from '../../layouts/Layout';
 import Header from '../../components/Header';
 
 function classNames(...classes) {
