@@ -11,15 +11,22 @@ import { useRouter } from 'next/router'
 export default function Header() {
   const [count, setcount] = useState(130)
   const router = useRouter()
+  const params = new URLSearchParams(router.query)
+  console.log('routes', router.query);
   const openWindow = () => {
     var width = 600, height = 600
     var left = (window.innerWidth / 2) - (width / 2)
     var top= (window.innerHeight / 2) - (height / 2)
-    window.open('http://localhost:3000/auth/authorize?client_id=123456789&redirect_to=https://soufiyan.com&small=true', '',       
-          `toolbar=no, location=no, directories=no, status=no, menubar=no, 
-          scrollbars=no, resizable=no, copyhistory=no, width=${width}, 
+    window['aarmy'] = {test:'dsds'}
+    window['aarmy2'] ='fdsfd'
+    window.open('http://localhost:3000/auth/authorize?client_id=123456789&redirect_to=https://soufiyan.com&small=true', 'Ratting',       
+          `width=${width}, 
           height=${height}, top=${top}, left=${left}`
         )
+        window.opener.postMess
+        window.addEventListener("message", function(event) {
+          console.log(event.data); // {user: 'data'}
+        }, false);
     }
   return (
     <motion.header {...FADE_ANIM} className="py-4 absolute top-0 left-0 w-full z-10">
@@ -36,20 +43,22 @@ export default function Header() {
             href={`http://localhost:3333/offers?offer-code=TEST6&email=soufiyan${count}@leventurestest.com&firstname=soufiyan&lastname=benallal`}
             target="_blank"
           >Mirror</a> */}
-          <button
-            onClick={openWindow}
-            className="fill-curren text-gray-100 bg-red-400 px-4 py-1 rounded-full"
-          >
-            Connect with Aarmy 1
-          </button>
-          <span className="dark:text-gray-700 text-gray-400 mx-6">-</span>
-          <a
-            href='http://localhost:3000/auth/authorize?client_id=123456789&redirect_to=https://soufiyan.com'
-            className="fill-curren text-gray-100 bg-blue-600 px-4 py-1 rounded-full"
-          >
-            Connect with Aarmy 2
-          </a>
-          <span className="dark:text-gray-700 text-gray-400 mx-6">-</span>
+          {router.query['aarmy'] && <>
+            <button
+              onClick={openWindow}
+              className="fill-curren text-gray-100 bg-red-400 px-4 py-1 rounded-full"
+            >
+              Connect with Aarmy 1
+            </button>
+            <span className="dark:text-gray-700 text-gray-400 mx-6">-</span>
+            <a
+              href='http://localhost:3000/auth/authorize?client_id=123456789&redirect_to=https://soufiyan.com'
+              className="fill-curren text-gray-100 bg-blue-600 px-4 py-1 rounded-full"
+            >
+              Connect with Aarmy 2
+            </a>
+            <span className="dark:text-gray-700 text-gray-400 mx-6">-</span>
+          </>}
 
           <a
             href="mailto:benallalsoufiane1@gmail.com?subject=🤝%20Project%20info.%20Let's%20talk"
