@@ -47,6 +47,11 @@ export default function HeroSection() {
             </span>
             <motion.span  {...NAME_ANIM}>YAN</motion.span>
           </h1>
+         <div className="flex justify-center">
+         <a href="https://www.buymeacoffee.com/soufiyan" target="_blank" rel="noreferrer">
+              <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" className='h-12 mt-6 relative' alt="Buy Me A Coffee" />
+          </a>
+         </div>
         </div>
         
       </div>

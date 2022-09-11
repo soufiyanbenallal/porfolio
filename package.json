@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port=4000",
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
@@ -12,6 +12,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@aarmy/connect": "^1.0.2",
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.1",
     "@motionone/utils": "^10.13.2",

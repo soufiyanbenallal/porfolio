@@ -8,26 +8,22 @@ import Logo from './Logo';
 import { FADE_ANIM } from '../motions/home';
 import { motion } from "framer-motion";
 import { useRouter } from 'next/router'
+import aarmy, { isAlreadyOpened} from "@aarmy/connect";
 export default function Header() {
-  const [count, setcount] = useState(130)
   const router = useRouter()
-  const params = new URLSearchParams(router.query)
-  console.log('routes', router.query);
   const openWindow = () => {
-    var width = 600, height = 600
-    var left = (window.innerWidth / 2) - (width / 2)
-    var top= (window.innerHeight / 2) - (height / 2)
-    window['aarmy'] = {test:'dsds'}
-    window['aarmy2'] ='fdsfd'
-    window.open('http://localhost:3000/auth/authorize?client_id=123456789&redirect_to=https://soufiyan.com&small=true', 'Ratting',       
-          `width=${width}, 
-          height=${height}, top=${top}, left=${left}`
-        )
-        window.opener.postMess
-        window.addEventListener("message", function(event) {
-          console.log(event.data); // {user: 'data'}
-        }, false);
+    const res= isAlreadyOpened()
+    console.log('isAlreadyOpened', res);
+    if (res.opened) {
+      return;
     }
+    const url = 'http://localhost:3000/auth/authorize?client_id=123456789&redirect_to=https://soufiyan.com&small=true'
+    aarmy.connect(url).then(data=>{
+      console.log('test', data);
+    }).catch(err=>{
+      console.log('err', err);
+    })
+  }
   return (
     <motion.header {...FADE_ANIM} className="py-4 absolute top-0 left-0 w-full z-10">
       <nav className="container-lg flex justify-between items-center py-4">
@@ -37,12 +33,7 @@ export default function Header() {
           </a>
         </Link>
         <div className="hidden md:flex items-center">
-          {/* <a 
-          className='text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-200'
-          onClick={() => setcount(count + 1)}
-            href={`http://localhost:3333/offers?offer-code=TEST6&email=soufiyan${count}@leventurestest.com&firstname=soufiyan&lastname=benallal`}
-            target="_blank"
-          >Mirror</a> */}
+    
           {router.query['aarmy'] && <>
             <button
               onClick={openWindow}
