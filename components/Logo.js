@@ -1,21 +1,9 @@
 import React from 'react';
 // className={className}
 export default function Logo({ className }) {
-  return (
-<svg version="1.1" className={className || ''} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"  viewBox="0 0 196.9 337" xmlSpace="preserve">
-<g>
-	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="33.7364" y1="-35.6208" x2="229.7364" y2="307.3792">
-		<stop  offset="0" style={{stopColor: '#D8092C'}}/>
-		<stop  offset="1" style={{stopColor: '#CE5706'}}/>
-	</linearGradient>
-	<path className="st0" fill="url(#SVGID_1_)" d="M196.9,127v145l-69.4-40v-35.1H72.89c-4.11,0-8.15-1.08-11.7-3.13L5.2,161.5c-3.22-1.85-5.2-5.29-5.2-9V0
-		h196.9l-62.31,62.31c-3.42,3.42-8.05,5.34-12.89,5.34H67.65V127H196.9z"/>
-	<linearGradient id="SVGID_2_"  gradientUnits="userSpaceOnUse" x1="-47.8177" y1="10.9815" x2="148.1823" y2="353.9815">
-		<stop  offset="0" style={{stopColor: '#D8092C'}}/>
-		<stop  offset="1" style={{stopColor: '#CE5706'}}/>
-	</linearGradient>
-	<polyline className="st1" fill="url(#SVGID_2_)" points="0,216.9 127.5,294.67 196.9,337 196.9,317 127.5,274.67 0,196.9 	"/>
-</g>
-</svg>
+  return (<svg className={className || ''}  data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111.86 242.67">
+			<path fill='currentColor' d="M88.18,147.08,14.64,73.54,88.18,0l20,20c14.77,14.77-20,34.14-20,53.51s34.8,38.73,20,53.51Z"/>
+			<path fill='currentColor' d="M23.68,108.32l60.81,60.81L23.68,229.94,10,216.28c-1-1-1.47-1.47-.49-4,1.41-3.63,5.09-8.38,8.65-13,6.8-8.79,14.5-18.74,14.5-30.16S25,147.76,18.18,139c-3.56-4.6-7.24-9.35-8.65-13-1-2.53-.49-3,.49-4l13.66-13.66m0-12.73-20,20c-14.77,14.78,20,34.14,20,53.51s-34.8,38.74-20,53.51l20,20,73.54-73.54L23.68,95.59Z"/>
+	</svg>
   );
 }

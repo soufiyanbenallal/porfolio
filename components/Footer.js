@@ -56,7 +56,7 @@ export default function Footer() {
             <GetInTouch />
           </Box>
           <Box className="w-full flex-1 px-12 flex flex-col items-center py-10">
-            <div className="mb-3 w-24 h-24 rounded-full bg-gray-1000 dark:bg-gray-200 flex items-center justify-center cursor-pointer text-red-700">
+            <div className="mb-3 w-24 h-24 rounded-full border-gray-1000 dark:border-gray-300 flex items-center justify-center cursor-pointer text-red-base">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="icon icon-tabler icon-tabler-stack"
@@ -76,7 +76,7 @@ export default function Footer() {
               </svg>
             </div>
             <h2 className="text-gray-200 dark:text-gray-900 text-xl tracking-normal text-center font-medium mb-1 capitalize">
-              Frontend Engineering Developer
+              Frontend Engineering
             </h2>
             <p className="text-gray-600 text-sm tracking-normal font-normal mb-3 text-center">
               Freelance / contracter

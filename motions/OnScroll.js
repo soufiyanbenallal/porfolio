@@ -27,10 +27,10 @@ export function ParallaxText({ children, baseVelocity = 100, className } ) {
     damping: 50,
     stiffness: 400
   });
-  const velocityFactor = useTransform(smoothVelocity, [0, 70], [0, 5], {
+  const velocityFactor = useTransform(smoothVelocity, [0, 20], [0, 1], {
     clamp: false
   });
-  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-139, 0, v)}%`);
 
   const directionFactor = useRef(1);
   const prevT = useRef(0);
@@ -65,14 +65,12 @@ export function ParallaxText({ children, baseVelocity = 100, className } ) {
    * dynamically generated number of children.
    */
   return (
-    <div className="parallax">
       <motion.div className={"scroller "+ className} style={{ x }}>
-        <span className='text-stroke text-4xl'>{children} </span>
-        <span className='text-stroke text-4xl'>{children} </span>
-        <span className='text-stroke text-4xl'>{children} </span>
-        <span className='text-stroke text-4xl'>{children} </span>
+        {children}
+        {children}
+        {children}
+        {children}
       </motion.div>
-    </div>
   );
 }
 export const Cards = ({ children, num = 900 }) => {

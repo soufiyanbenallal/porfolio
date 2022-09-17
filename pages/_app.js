@@ -4,7 +4,6 @@ import Layout from '../layouts/Layout';
 /* eslint-disable react/react-in-jsx-scope */
 // import 'tailwindcss/tailwind.css'
 import '../styles/globals.css';
-import '../styles/style.css';
 
 // import {
 //   AnimatePresence,

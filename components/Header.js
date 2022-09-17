@@ -25,7 +25,7 @@ export default function Header() {
     })
   }
   return (
-    <motion.header {...FADE_ANIM} className="py-4 absolute top-0 left-0 w-full z-10">
+    <motion.header {...FADE_ANIM} className="py-4 absolute top-0 left-0 w-full z-20 font-one">
       <nav className="container-lg flex justify-between items-center py-4">
         <Link href="/">
           <a className="max-w-max -ml-3">
@@ -37,7 +37,7 @@ export default function Header() {
           {router.query['aarmy'] && <>
             <button
               onClick={openWindow}
-              className="fill-curren text-gray-100 bg-red-400 px-4 py-1 rounded-full"
+              className="fill-curren text-gray-100 bg-red-base px-4 py-1 rounded-full"
             >
               Connect with Aarmy 1
             </button>

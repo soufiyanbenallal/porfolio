@@ -1,3 +1,10 @@
+@layer {
+  h1,h2,h3,h4,h5,h6{
+    @apply font-one;
+  }
+
+}
+
 .example-container div {
   background: #ccc;
   border-radius: 30px;
@@ -126,13 +133,13 @@ body.tight .wrapper {
 }
 .bg-lines .container-lg>div>span {
   position: absolute;
-  width: 5px;
+  width: 2px;
   height: 60px;
   top: -100%;
   right: -2px;
   background: linear-gradient(to bottom,transparent,#ff0040be);
   animation: lineAnimate 6s linear infinite;
-  filter: blur(3px);
+  filter: blur(1px);
 }
 .bg-lines .container-lg>div:nth-child(1) span{
   animation-delay: 0s;
@@ -171,31 +178,31 @@ svg.text-animation {
 }
 
 .text-copy {
-  fill: rgba(255, 46, 46, 0);
-  stroke: white;
+  fill: rgba(44, 88, 150, 0);
+  @apply stroke-red-base;
   stroke-dasharray: 6% 29%;
-  stroke-width: 1px;
+  stroke-width: 8px;
   stroke-dashoffset: 0%;
-  animation: stroke-offset 5.5s infinite linear;
+  animation: stroke-offset 9.5s infinite linear;
 }
 
 .text-copy:nth-child(1){
-stroke: #88888821;
-animation-delay: -1;
+  @apply stroke-red-hover;
+  animation-delay: -1;
 }
 
 .text-copy:nth-child(2){
-stroke: #88888821;
+stroke: #888888;
 animation-delay: -2s;
 }
 
 .text-copy:nth-child(3){
-stroke: #ff0055a8;  
-animation-delay: -3s;
+  @apply stroke-red-base;
+  animation-delay: -3s;
 }
 
 .text-copy:nth-child(4){
-stroke: #88888821;
+stroke: #888888;
 animation-delay: -4s;
 }
 

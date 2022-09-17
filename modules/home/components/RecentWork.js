@@ -54,8 +54,8 @@ export default function RecentWork({ inverse }) {
               src="/wevente-logo.png"
               alt=""
             />
-            <div className="absolute inset-0 bg-red-400 opacity-30 mix-blend-multiply" />
-            {/* <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-red-500 opacity-20" /> */}
+            <div className="absolute inset-0 bg-red-base opacity-30 mix-blend-multiply" />
+            {/* <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-red-base opacity-20" /> */}
             <div className="relative px-8">
               {/* <div>
                 <img
@@ -67,7 +67,7 @@ export default function RecentWork({ inverse }) {
               <blockquote className="mt-8">
                 <div className="relative text-lg font-medium text-white md:flex-grow">
                   <svg
-                    className="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-red-400"
+                    className="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-red-base"
                     fill="currentColor"
                     viewBox="0 0 32 32"
                     aria-hidden="true"
@@ -101,7 +101,7 @@ export default function RecentWork({ inverse }) {
             Some Things I&apos;ve Built
           </h2>
           <div className="mt-6 text-gray-500 space-y-6">
-            <h5 className="text-red-500">Feature project</h5>
+            <h5 className="text-red-base">Feature project</h5>
             <p className="text-base ">
               Ecommerce website for a international business. based on shopify
               as a backend managing system. The idea of this project is to build
@@ -124,7 +124,7 @@ export default function RecentWork({ inverse }) {
           <div className="mt-10">
             <a
               href="https://wevente.myshopify.com/"
-              className="text-base font-medium text-red-600"
+              className="text-base font-medium text-red-base"
             >
               {' '}
               Learn more about Wevente <span aria-hidden="true">
