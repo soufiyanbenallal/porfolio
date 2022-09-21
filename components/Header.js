@@ -9,6 +9,8 @@ import { FADE_ANIM } from '../motions/home';
 import { motion } from "framer-motion";
 import { useRouter } from 'next/router'
 import aarmy, { isAlreadyOpened} from "@aarmy/connect";
+import BuyMeCoffe from './BuyMeCoffe';
+import LogoAnimate from './LogoAnimate';
 export default function Header() {
   const router = useRouter()
   const openWindow = () => {
@@ -25,15 +27,18 @@ export default function Header() {
     })
   }
   return (
-    <motion.header {...FADE_ANIM} className="py-4 absolute top-0 left-0 w-full z-20 font-one">
+    <motion.header className="py-4 absolute top-0 left-0 w-full z-20 font-one">
       <nav className="container-lg flex justify-between items-center py-4">
         <Link href="/">
           <a className="max-w-max -ml-3">
-            <Logo className="h-12 -my-2 dark:text-white text-gray-900" />
+            {/* <Logo className="h-12 -my-2 dark:text-white text-gray-900" /> */}
+            <LogoAnimate className='dark:text-red-base w-16 -m-4'/>
           </a>
         </Link>
         <div className="hidden md:flex items-center">
-    
+        <BuyMeCoffe className='flex items-center space-x-2 border-2 border-yellow-400 text-yellow-400 px-3 py-1 rounded-md'  href="https://www.buymeacoffee.com/soufiyan" target="_blank" rel="noreferrer" />
+        <span className="dark:text-gray-700 text-gray-400 mx-6">-</span>
+
           {router.query['aarmy'] && <>
             <button
               onClick={openWindow}

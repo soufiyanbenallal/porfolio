@@ -1,59 +1,94 @@
 import React, { useState,useEffect } from "react";
-import { motion, useMotionValue, animate, useTransform } from "framer-motion";
+import { motion, useMotionValue, useTransform , useAnimation, AnimatePresence} from "framer-motion";
 import { interpolate } from "flubber";
 
 export const getIndex = (_, index) => index;
 
-export function useFlubber(progress, paths) {
-  return useTransform(progress, paths.map(getIndex), paths, {
-    mixer: (a, b) => interpolate(a, b, { maxSegmentLength: 0.1 })
-  });
-}
-const p1 = 'M73.54,147.08,0,73.54,73.54,0l20,20c14.77,14.77-20,34.14-20,53.51s34.8,38.73,20,53.51Z';
-const p2 = 'M144.13,76.37,73.5,147,0,73.5,73.5,0l70.63,70.63A4,4,0,0,1,144.13,76.37Z';
 
-const paths1 = [p2, p1];
-const paths = paths1
+const p1 = 'M566.53,702.16L364.36,500l202.16-202.16l55.06,55.06c40.63,40.63-55.06,93.85-55.06,147.1  s95.67,106.47,55.06,147.1L566.53,702.16z';
 
 
-export default function LogoAnimate() {
-  const [pathIndex, setPathIndex] = useState(0);
-  const progress = useMotionValue(pathIndex);
-  const path = useFlubber(progress, paths);
-  const pathLength = useMotionValue(0);
-  const opacity = useTransform(pathLength, [0.05, 0.15], [0, 1]);
+const icon = {
+  hidden: {
+    opacity: 0,
+    pathLength: 0,
+    y: 100,
+    x: 0,
+    rotate: -90,
+    fill: "rgba(255, 255, 255, 0)"
+  },
+  visible: {
+    opacity: 1,
+    y: -60,
+    x: 105,
+    rotate: 0,
+    pathLength: 1,
+    fill: "rgba(255, 255, 255, 1)"
+  }
+};
 
-  useEffect(() => {
+const icon2 = {
+  hidden: {
+    opacity: 0,
+    rotate: 0,
+    fill: "rgba(255, 255, 255, 0)"
+  },
+  visible: {
+    y: 60,
+    x: -105,
+    opacity: 1,
+    rotate: -180,
+    pathLength: 1,
+    fill: "rgba(255, 255, 255, 0)"
+  }
+};
 
-    const animation = animate(progress, pathIndex, {
-      duration: 0.8,
-      ease: "easeInOut",
-      delay:.1,
-      onComplete: () => {
-        if (pathIndex === 1) {
-          // progress.set(0);
-          // setPathIndex(1);
-        } else {
-          setPathIndex(pathIndex + 1);
-        }
-      }
-    });
-
-    return () => animation.stop();
-  }, [pathIndex]);
+export default function  LogoAnimate (props){
 
   return (
-    <svg >
-        <motion.path d={path} 
-                            fill="transparent"
-                            transition={{ duration: 1 }}
-                            strokeWidth="5"
-                            stroke="#000"
-         animate={{ pathLength: 1, 
-          fillOpacity: 1,
-      }}
-      style={{ pathLength: pathLength, opacity: opacity }}
+    <motion.div
+    {...props}
+    transition={{
+      delay: 2,
+      type:'spring',
+      duration: 2,
+      bounce:.4
+    
+    }}
+    initial={{ y: "calc(50vh - 60px)" , x: "calc(50vw - 87px)" , scale: 2.5 }}
+    animate={{ y: 0, x:0 ,  scale: 1}}
+    >
+      <motion.svg
+        
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px" y="0px" viewBox="0 0 1000 1000" 
+      >
+        <motion.path
+          d={p1}
+          initial="hidden"
+          animate="visible"
+          variants={icon}
+          strokeWidth="5"
+          stroke="currentColor"
+          transition={{
+            default: { duration: 8, type:'spring',bounce:.4, delay: 0},
+            fill: { duration: 1, ease: 'easeInOut',delay:1 }
+          }}
         />
-    </svg>
-  );
+        <motion.path
+          d={p1}
+          initial="hidden"
+          animate="visible"
+          variants={icon2}
+          strokeWidth="12"
+          stroke="currentColor"
+          transition={{
+            delay: .3,
+            default: { duration: 4, type:'spring',bounce:.7, },
+            fill: { duration: 3, ease: 'easeInOut' }
+          }}
+        />
+      </motion.svg>
+      </motion.div>
+  )
 }
