@@ -32,7 +32,7 @@ export default function Header() {
         <Link href="/">
           <a className="max-w-max -ml-3">
             {/* <Logo className="h-12 -my-2 dark:text-white text-gray-900" /> */}
-            <LogoAnimate className='dark:text-red-base w-16 -m-4'/>
+            <LogoAnimate className='dark:text-gray-100 w-16 -m-4'/>
           </a>
         </Link>
         <div className="hidden md:flex items-center">

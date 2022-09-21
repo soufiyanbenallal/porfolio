@@ -83,8 +83,9 @@ export default function HeroSection() {
             <p>A Developer and UX/UI developer </p>
             <p>With a passion for creating slick digital experiences.</p>
           </motion.div>
-          <div className="flex">
-            <AnimatedTextCharacter className='text-stroke -ml-80  text-[12rem]' text='SOUFIYAN' delay={1.5}></AnimatedTextCharacter>
+          <LogoText className='dark:text-gray-100'/>
+          {/* <div className="flex">
+            <AnimatedTextCharacter className='text-stroke -ml-80  text-[13rem]' text='SOUFIYAN' delay={2}></AnimatedTextCharacter>
             <motion.svg {...FADE_ANIM} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1000 1000" className='text-white w-40 -mr-40'>
               <path
                 d='M566.53,702.16L364.36,500l202.16-202.16l55.06,55.06c40.63,40.63-55.06,93.85-55.06,147.1  s95.67,106.47,55.06,147.1L566.53,702.16z'
@@ -101,8 +102,8 @@ export default function HeroSection() {
                 strokeWidth={10}
               />
             </motion.svg>
-            <AnimatedTextCharacter className='text-stroke -mr-80  text-[12rem]' text='BENALLAL' delay={2}></AnimatedTextCharacter>
-          </div>
+            <AnimatedTextCharacter className='text-stroke -mr-80  text-[13rem]' text='BENALLAL' delay={2.3}></AnimatedTextCharacter>
+          </div> */}
           {/* <div>IYAN</div> */}
         </div>
         
