@@ -181,9 +181,11 @@ svg.text-animation {
   fill: rgba(44, 88, 150, 0);
   @apply stroke-red-base;
   stroke-dasharray: 6% 29%;
-  stroke-width: 8px;
+  stroke-width: 1px;
   stroke-dashoffset: 0%;
   animation: stroke-offset 9.5s infinite linear;
+  font-family: SecularOne-Regular, sans-serif;
+
 }
 
 .text-copy:nth-child(1){

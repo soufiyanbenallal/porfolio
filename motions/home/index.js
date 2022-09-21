@@ -31,10 +31,10 @@ export const FADE_ANIM = {
   }
 
   export const NAME_ANIM = {
-    initial:{ scale: 5 ,opacity: 0},
+    initial:{ scale: 3 ,opacity: 0},
     animate:{ scale: 1,opacity: 1 },
     transition:{
-     delay: 1.5,
+     delay: 3,
      ease: "easeInOut",
       duration: 1.5,
     }

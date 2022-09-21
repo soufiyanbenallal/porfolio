@@ -30,7 +30,7 @@ export default function Layout({ children }) {
       <main className="wrapper rounded-b-xl overflow-hidden">
         <Header />
 
-        {/* <motion.div {...FADE_ANIM} >
+        <motion.div {...FADE_ANIM} >
         <div className="bg-lines opacity-30">
           <div className="container-lg">
 
@@ -42,7 +42,7 @@ export default function Layout({ children }) {
           </div>
         </div>
         </motion.div>
-         */}
+        
         {children}
         </main>
       <Footer />

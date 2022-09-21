@@ -11,7 +11,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
-        one: ['SecularOne-Regular', 'sans-serif'],
+        // one: ['SecularOne-Regular', 'sans-serif'],
+        one: ['Brogte', 'sans-serif'],
 
       },
       colors: {
