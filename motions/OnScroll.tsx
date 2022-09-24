@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-// import { motion, useViewportScroll,useScroll, useTransform, useMotionValue, useVelocity, useSpring } from 'framer-motion';
+import React, { ReactElement, ReactNode, useEffect, useRef } from 'react';
 import {
   motion,
   useScroll,
@@ -9,17 +8,21 @@ import {
   useVelocity,
   useAnimationFrame,
   useViewportScroll,
-  useAnimation
-} from "framer-motion";
-import { wrap } from "@motionone/utils";
+  useAnimation,
+  MotionValue
+} from 'framer-motion';
+import { wrap } from '@motionone/utils';
 import { useInView } from 'react-intersection-observer';
-export function useParallax(value, distance) {
+export function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-
-
-export function ParallaxText({ children, baseVelocity = 100, className } ) {
+export interface IParallaxText { 
+  children: ReactNode, 
+  baseVelocity?:number, 
+  className?: string
+} 
+export function ParallaxText({ children, baseVelocity = 100, className } :IParallaxText): ReactElement {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -65,7 +68,7 @@ export function ParallaxText({ children, baseVelocity = 100, className } ) {
    * dynamically generated number of children.
    */
   return (
-      <motion.div className={"scroller "+ className} style={{ x }}>
+      <motion.div className={'scroller '+ className} style={{ x }}>
         {children}
         {children}
         {children}
@@ -74,16 +77,20 @@ export function ParallaxText({ children, baseVelocity = 100, className } ) {
       </motion.div>
   );
 }
-export const Cards = ({ children, num = 900 }) => {
+export interface ICards { 
+  children: ReactNode, 
+  num?:number, 
+} 
+export const Cards = ({ children, num = 900 }: ICards): ReactElement => {
   const control = useAnimation();
   const [ref, inView] = useInView();
   const { scrollYProgress } = useViewportScroll();
 
   useEffect(() => {
     if (inView) {
-      control.start("visible");
+      control.start('visible');
     } else {
-      control.start("hidden");
+      control.start('hidden');
       control.stop();
     }
   }, [control, inView]);

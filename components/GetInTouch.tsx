@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import Logo from './Logo';
-export default function GetInTouch() {
+export default function GetInTouch(): ReactElement {
   return (
       <div className="py-6 sm:py-12">
         <div className="text-center">

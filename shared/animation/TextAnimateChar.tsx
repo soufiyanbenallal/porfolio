@@ -1,6 +1,11 @@
+import React, { ReactElement } from "react";
 import { motion } from "framer-motion";
-import React from "react";
-export const AnimatedTextCharacter = ({ text , className, delay= .51}) => {
+interface IAnimatedTextCharacter {
+  text: string
+  className?: string
+  delay?: number
+}
+export const AnimatedTextCharacter = ({ text , className= '', delay= .51}: IAnimatedTextCharacter): ReactElement => {
     // splitting text into letters
       const letters = Array.from(text);
     

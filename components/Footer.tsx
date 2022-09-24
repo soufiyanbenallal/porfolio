@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { FADE_ANIM } from '../motions/home';
 import Box from './Box';
 import GetInTouch from './GetInTouch';
 import SocialMedia from './SocialMedia';
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
-export default function Footer() {
+export default function Footer(): ReactElement {
   return (
     <footer>
        <section className="container my-10 flex items-start justify-center min-h-[350px] overflow-hidden">
@@ -17,7 +18,7 @@ export default function Footer() {
         <article className="flex flex-col md:flex-row mx-auto rounded-xl md:divide-x divide-gray-500 divide-opacity-20 z-50">
           <Box className="w-full flex-1 px-12 flex flex-col items-center py-10">
             <div className="w-24 h-24 mb-3 p-2 rounded-full  flex items-center justify-center">
-              <img
+              <Image
                 className="w-full h-full overflow-hidden object-cover rounded-full"
                 src="/profile.jpg"
                 alt="avatar"

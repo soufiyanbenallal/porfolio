@@ -1,17 +1,12 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/jsx-no-target-blank */
-import React,{useState} from 'react';
+import React,{ReactElement} from 'react';
 import Link from 'next/link';
 import DarkModeSwitcher from './DarkModeSwitcher';
-import Logo from './Logo';
-// import SocialMedia from './SocialMedia';
-import { FADE_ANIM } from '../motions/home';
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 import { useRouter } from 'next/router'
-import aarmy, { isAlreadyOpened} from "@aarmy/connect";
+import aarmy, { isAlreadyOpened} from '@aarmy/connect';
 import BuyMeCoffe from './BuyMeCoffe';
 import LogoAnimationComponent from './logoAnimation/LogoAnimationComponent';
-export default function Header() {
+export default function Header(): ReactElement {
   const router = useRouter()
   const openWindow = () => {
     const res= isAlreadyOpened()
@@ -21,7 +16,7 @@ export default function Header() {
     }
     const url = 'http://localhost:3000/auth/authorize?client_id=123456789&redirect_to=https://soufiyan.com&small=true'
     aarmy.connect(url).then(data=>{
-      console.log('test', data);
+      console.log(data);
     }).catch(err=>{
       console.log('err', err);
     })

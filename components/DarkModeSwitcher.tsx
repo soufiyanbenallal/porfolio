@@ -1,8 +1,8 @@
-import React, { useCallback } from 'react';
+import React, { ReactElement, useCallback } from 'react';
 import useTheme from '../shared/hooks/useTheme';
 import { MoonIcon, SunIcon } from './ThemesIcon';
 
-export default function DarkModeSwitcher() {
+export default function DarkModeSwitcher(): ReactElement {
   const {isDark, setIsDark} = useTheme()
   /**
    * @requires

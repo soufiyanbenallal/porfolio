@@ -6,7 +6,7 @@ import axios from 'axios';
  * @param {object} params - params to send
  * @returns {Promise<any>}
  */
-export const get = (url, payload = {}) => {
+export const get = (url: string, payload: any = {}) => {
   // return axios.get(process.env.NEXT_PUBLIC_ENV_API_URL + url , {
   return axios.get(url, {
     params: payload,

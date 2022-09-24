@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function RecentWork({ inverse }) {
+export default function RecentWork({ inverse }: {inverse?: boolean}) {
   return (
     <section className="h-screen relative py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
       <div

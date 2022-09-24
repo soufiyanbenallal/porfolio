@@ -1,9 +1,9 @@
-import React from "react";
-import { motion} from "framer-motion";
-import { icon2, p1 } from "./logoAnimationConst";
-import useTheme from "../../shared/hooks/useTheme";
+import React from 'react';
+import { motion} from 'framer-motion';
+import { icon2, p1 } from './logoAnimationConst';
+import useTheme from '../../shared/hooks/useTheme';
 
-export default function LogoAnimationComponent (props){
+export default function LogoAnimationComponent (props: any){
   const {isDark} = useTheme()
   const icon = {
     hidden: {
@@ -12,7 +12,7 @@ export default function LogoAnimationComponent (props){
       y: 100,
       x: 0,
       rotate: -90,
-      fill:  isDark ? "rgba(170, 170, 170, .05)" : "rgba(100, 100, 100, .05)",
+      fill:  isDark ? 'rgba(170, 170, 170, .05)' : 'rgba(100, 100, 100, .05)',
     },
     visible: {
       opacity: 1,
@@ -20,7 +20,7 @@ export default function LogoAnimationComponent (props){
       x: 105,
       rotate: 0,
       pathLength: 1,
-      fill:  isDark ? "rgba(170, 170, 170, 1)" : "rgba(50, 50, 50, 1)",
+      fill:  isDark ? 'rgba(170, 170, 170, 1)' : 'rgba(50, 50, 50, 1)',
     }
   };
   return (
@@ -33,7 +33,7 @@ export default function LogoAnimationComponent (props){
         bounce:.4
       
       }}
-      initial={{ y: "calc(50vh - 60px)" , x: "calc(50vw - 87px)" , scale: 2.5 }}
+      initial={{ y: 'calc(50vh - 60px)' , x: 'calc(50vw - 87px)' , scale: 2.5 }}
       animate={{ y: 0, x:0 ,  scale: 1}}
     >
       <motion.svg

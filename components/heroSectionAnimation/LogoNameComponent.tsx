@@ -1,22 +1,22 @@
 import classNames from 'classnames'
 import React from 'react'
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 import useTheme from '../../shared/hooks/useTheme';
 import { container, defaultTransition, lineMiddle, lineTopBottom } from './logoNameConst';
 
 
-export default function LogoNameComponent({className}) {
+export default function LogoNameComponent({className}: {className: string}) {
   const {isDark} = useTheme()
   const child = {
       hidden: {
         pathLength: 0,
-        fill: isDark ? "rgba(170, 170, 170, .05)" : "rgba(100, 100, 100, .05)",
+        fill: isDark ? 'rgba(170, 170, 170, .05)' : 'rgba(100, 100, 100, .05)',
         y:4,
         x:4,
       },
       visible: {
         pathLength: 1,
-        fill: isDark ? "rgba(170, 170, 170, 1)" : "rgba(100, 100, 100, 1)",
+        fill: isDark ? 'rgba(170, 170, 170, 1)' : 'rgba(100, 100, 100, 1)',
         y:-4,
         x:-4
       },
@@ -106,7 +106,7 @@ export default function LogoNameComponent({className}) {
                         opacity: { 
                           duration: 1.5, 
                           repeatType: 'mirror',
-                          ease: "easeInOut",
+                          ease: 'easeInOut',
                           repeat: Infinity,
                           repeatDelay: 3 * Math.random(),
 

@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 
-export default function BuyMeCoffe(props) {
+export default function BuyMeCoffe(props: any): ReactElement {
   return (
     <a {...props}>
         <svg id="Layer_3" className='h-8 py-1' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 883.24 1271.67">

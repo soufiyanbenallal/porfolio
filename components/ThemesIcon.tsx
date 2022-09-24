@@ -1,7 +1,7 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { ReactElement } from 'react';
+import { motion } from 'framer-motion';
 export const transition = {
-  type: "spring",
+  type: 'spring',
   stiffness: 200,
   damping: 10
 };
@@ -16,7 +16,7 @@ const parent = {
   animate: { scale: 1, rotate: 0, transition },
   whileTap
 };
-export const MoonIcon = () => {
+export const MoonIcon = (): ReactElement => {
   const variants = {
     initial: { scale: 0.6, rotate: 180 },
     animate: { scale: 1, rotate: 0, transition },
@@ -45,7 +45,7 @@ export const MoonIcon = () => {
     </motion.svg>
   );
 };
-export const SunIcon = () => {
+export const SunIcon = (): ReactElement => {
   const raysVariants = {
     initial: { rotate: 45, scale: 1.2 },
     animate: { rotate: 0, scale: 1, transition }
@@ -66,7 +66,7 @@ export const SunIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
       whileTap={whileTap}
       // Centers the rotation anchor point vertically & horizontally
-      style={{ originX: "50%", originY: "50%" }}
+      style={{ originX: '50%', originY: '50%' }}
       initial="initial"
       animate="animate"
       variants={parent}

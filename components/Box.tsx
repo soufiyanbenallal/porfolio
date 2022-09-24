@@ -1,10 +1,10 @@
-import React,{ useEffect } from "react";
-import { motion, useAnimation, useTransform, useViewportScroll } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React,{ ReactElement, ReactNode, useEffect } from 'react';
+import { motion, useAnimation, useTransform, useScroll } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const boxVariant = {
   visible: { opacity: 1, scale: 1,translateY:0,   transition: {
-    type: "spring",
+    type: 'spring',
     damping: 12,
     stiffness: 100,
   } },
@@ -12,8 +12,8 @@ const boxVariant = {
 };
 
 
-export const AnimatedTextWord = ({ text }) => {
-  const words = text.split("");
+export const AnimatedTextWord = ({ text }:{text: string}): ReactElement => {
+  const words = text.split('');
 
   const container = {
     hidden: { opacity: 0 },
@@ -28,7 +28,7 @@ export const AnimatedTextWord = ({ text }) => {
       opacity: 1,
       x: 0,
       transition: {
-        type: "spring",
+        type: 'spring',
         damping: 12,
         stiffness: 100,
       },
@@ -37,7 +37,7 @@ export const AnimatedTextWord = ({ text }) => {
       opacity: 0,
       x: 200,
       transition: {
-        type: "spring",
+        type: 'spring',
         damping: 12,
         stiffness: 100,
       },
@@ -46,13 +46,13 @@ export const AnimatedTextWord = ({ text }) => {
 
   return (
     <motion.div
-      style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }}
+      style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
       variants={container}
       initial="hidden"
       animate="visible"
     >
       <h3 className="  dark:text-gray-100">
-      {words.map((word, index) => (
+      {words.map((word: string, index: number) => (
         <motion.span
           variants={child}
           key={index}
@@ -64,7 +64,7 @@ export const AnimatedTextWord = ({ text }) => {
     </motion.div>
   );
 };
-export const AnimatedTextCharacter = ({ text }) => {
+export const AnimatedTextCharacter = ({ text }:{text: string}): ReactElement => {
   const letters = Array.from(text);
 
   const container = {
@@ -81,7 +81,7 @@ export const AnimatedTextCharacter = ({ text }) => {
       x: 0,
       y: 0,
       transition: {
-        type: "spring",
+        type: 'spring',
         damping: 12,
         stiffness: 100,
       },
@@ -91,7 +91,7 @@ export const AnimatedTextCharacter = ({ text }) => {
       x: -20,
       y: 10,
       transition: {
-        type: "spring",
+        type: 'spring',
         damping: 12,
         stiffness: 100,
       },
@@ -100,36 +100,36 @@ export const AnimatedTextCharacter = ({ text }) => {
 
   return (
     <motion.div
-      style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }}
+      style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
       variants={container}
       initial="hidden"
       animate="visible"
     >
       {letters.map((letter, index) => (
         <motion.span variants={child} key={index} className=" dark:text-gray-100">
-          {letter === " " ? "\u00A0" : letter}
+          {letter === ' ' ? '\u00A0' : letter}
         </motion.span>
       ))}
     </motion.div>
   );
 };
 
-export default function Box({ children, className }){
+export default function Box({ children, className }: { children?: ReactNode, className?: string }): ReactElement{
 
   const control = useAnimation();
   const [ref, inView] = useInView();
 
   useEffect(() => {
     if (inView) {
-      control.start("visible");
+      control.start('visible');
     } else {
-      control.start("hidden");
+      control.start('hidden');
     }
   }, [control, inView]);
 
   return (
     <motion.div
-      className={className ? className : "w-full"}
+      className={className ? className : 'w-full'}
       ref={ref}
       variants={boxVariant}
       initial="hidden"
@@ -141,16 +141,16 @@ export default function Box({ children, className }){
 };
 
 
-export function Card({children, className, num = 800}) {
+export function Card({children, className, num = 800}: { children?: ReactNode, className?: string, num?:number }): ReactElement {
   const h = 900// window.innerHeight
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
   const y2 = useTransform(scrollY, [0, h], [num, -200]);
 
   return (
   // <Box>
 
       <motion.div
-        className={className ? className : "dark:bg-gray-1000 bg-gray-200 p-7 rounded-3xl"}
+        className={className ? className : 'dark:bg-gray-1000 bg-gray-200 p-7 rounded-3xl'}
         style={{ y: y2}}
         >
       {children}
