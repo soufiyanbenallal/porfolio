@@ -1,15 +1,16 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
+import useTheme from '../shared/hooks/useTheme';
 import { MoonIcon, SunIcon } from './ThemesIcon';
 
 export default function DarkModeSwitcher() {
-  const [enabled, setEnabled] = useState(true);
+  const {isDark, setIsDark} = useTheme()
   /**
    * @requires
    * @param {boolean} enabled
    *
    */
   const toggleDarkMode = useCallback(() => {
-    setEnabled((v) => {
+    setIsDark((v) => {
       const newValue = !v;
       if (newValue) {
         localStorage.theme = 'dark';
@@ -19,24 +20,15 @@ export default function DarkModeSwitcher() {
       return newValue;
     });
   }, []);
-  useEffect(() => {
-    const isDark = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-      enabled === false && setEnabled(true);
-    } else {
-      document.documentElement.classList.remove('dark');
-      enabled === true && setEnabled(false);
-    }
-  }, [enabled]);
+
   return (
     <button
       onClick={toggleDarkMode}
       className={`${
-        !enabled ? 'text-gray-900 ' : 'text-gray-100 '
+        !isDark ? 'text-gray-900 ' : 'text-gray-100 '
       } relative inline-flex items-center -mr-[9px] `}
     >
-      {enabled ?  <SunIcon />: <MoonIcon />}
+      {isDark ?  <SunIcon />: <MoonIcon />}
     </button>
   );
 }

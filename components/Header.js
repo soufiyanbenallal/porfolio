@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import { useRouter } from 'next/router'
 import aarmy, { isAlreadyOpened} from "@aarmy/connect";
 import BuyMeCoffe from './BuyMeCoffe';
-import LogoAnimate from './LogoAnimate';
+import LogoAnimationComponent from './logoAnimation/LogoAnimationComponent';
 export default function Header() {
   const router = useRouter()
   const openWindow = () => {
@@ -32,11 +32,11 @@ export default function Header() {
         <Link href="/">
           <a className="max-w-max -ml-3">
             {/* <Logo className="h-12 -my-2 dark:text-white text-gray-900" /> */}
-            <LogoAnimate className='dark:text-gray-100 w-16 -m-4'/>
+            <LogoAnimationComponent className='dark:text-gray-100 w-16 -m-4'/>
           </a>
         </Link>
         <div className="hidden md:flex items-center">
-        <BuyMeCoffe className='flex items-center space-x-2 border-2 border-yellow-400 text-yellow-400 px-3 py-1 rounded-md'  href="https://www.buymeacoffee.com/soufiyan" target="_blank" rel="noreferrer" />
+        <BuyMeCoffe className='flex items-center space-x-2 border-[2px] border-red-base text-red-base px-3 py-1 rounded-md'  href="https://www.buymeacoffee.com/soufiyan" target="_blank" rel="noreferrer" />
         <span className="dark:text-gray-700 text-gray-400 mx-6">-</span>
 
           {router.query['aarmy'] && <>
