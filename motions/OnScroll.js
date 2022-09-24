@@ -70,6 +70,7 @@ export function ParallaxText({ children, baseVelocity = 100, className } ) {
         {children}
         {children}
         {children}
+        {children}
       </motion.div>
   );
 }

@@ -62,7 +62,7 @@ export default function LogoNameComponent({className}) {
                         pathLength: { 
                           duration: 2, 
                           delay: 2,
-                          repeatDelay:.5,
+                          repeatDelay: Math.random(),
                           ...defaultTransition,
 
                         },
@@ -70,7 +70,7 @@ export default function LogoNameComponent({className}) {
                           duration: 3, 
                           delay: 2,
                           ...defaultTransition,
-                          repeatDelay:4 * Math.random(),
+                          repeatDelay: 4 * Math.random(),
 
                         },
                       }}

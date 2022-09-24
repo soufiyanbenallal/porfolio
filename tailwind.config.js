@@ -11,8 +11,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
-        // one: ['SecularOne-Regular', 'sans-serif'],
-        one: ['Brogte', 'sans-serif'],
+        one: ['SecularOne-Regular', 'sans-serif'],
+        cookie: ['cookie', 'sans-serif'],
+        // one: ['Brogte', 'sans-serif'],
 
       },
       colors: {
@@ -25,12 +26,12 @@ module.exports = {
           600: '#757575',
           700: '#616161',
           800: '#323232',
-          900: '#0D0D0D',
+          900: '#0d0c13',
           1000: '#0A0A0A',
         },
         red:{
-          hover:'#74104D',
-          base: '#901644',
+          hover:'#b50841',
+          base: '#f70656',
           // 700: '#c30620',
           // 800: '#c30620',
           // 900: '#c30620',
