@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>SOUFIYAN BENALLAL | PORTFOLIO</title>
+        <title>PORTFOLIO | SOUFIYAN BENALLAL</title>
         <link rel="icon" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect } from 'react';
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 import Footer from '../components/Footer';
 import { FADE_ANIM } from '../motions/home';
 import Header from '../components/Header';
@@ -30,19 +30,19 @@ export default function Layout({ children }:{children: ReactNode }) {
     <>
       <main className="wrapper rounded-b-xl overflow-hidden">
         <Header />
-
+{/* 
         <motion.div {...FADE_ANIM} >
-        <div className="bg-lines opacity-30">
-          <div className="container-lg">
+          <div className="bg-lines opacity-30">
+            <div className="container-lg">
 
-          <div><span></span></div>
-          <div><span></span></div>
-          <div><span></span></div>
-          <div><span></span></div>
-          <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            <div><span></span></div>
+            </div>
           </div>
-        </div>
-        </motion.div>
+        </motion.div> */}
         
         {children}
         </main>

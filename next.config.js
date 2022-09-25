@@ -31,6 +31,7 @@ module.exports = (phase, { defaultConfig }) => {
       loader: 'imgix',
       path: '/',
     },
+
     reactStrictMode: true,
     swcMinify: true,
   });

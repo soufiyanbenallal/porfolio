@@ -64,14 +64,14 @@ export const AnimatedTextWord = ({ text }:{text: string}): ReactElement => {
     </motion.div>
   );
 };
-export const AnimatedTextCharacter = ({ text }:{text: string}): ReactElement => {
+export const AnimatedTextCharacter = ({ text, size=2,className, delay=0 }:{text: string, size?:number,className?: string, delay?: number}): ReactElement => {
   const letters = Array.from(text);
 
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.03, delayChildren: 0.04 * i },
+      transition: { staggerChildren: 0.03, delayChildren: 0.04 * i, delay },
     }),
   };
 
@@ -100,7 +100,8 @@ export const AnimatedTextCharacter = ({ text }:{text: string}): ReactElement => 
 
   return (
     <motion.div
-      style={{ overflow: 'hidden', display: 'flex', fontSize: '2rem' }}
+      style={{ overflow: 'hidden', display: 'flex', fontSize: `${size}rem` }}
+      className={className}
       variants={container}
       initial="hidden"
       animate="visible"
