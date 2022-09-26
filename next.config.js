@@ -30,6 +30,7 @@ module.exports = (phase, { defaultConfig }) => {
     images: {
       loader: 'imgix',
       path: '/',
+      unoptimized: true
     },
 
     reactStrictMode: true,
