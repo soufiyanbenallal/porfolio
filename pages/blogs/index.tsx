@@ -1,9 +1,9 @@
-import React, { ReactNode, useEffect, useState } from 'react';
+import React from 'react';
 // eslint-disable-next-line no-unused-vars
-import { get } from '../../services/api.service';
-import Header from '../../components/Header';
-import classNames from 'classnames';
-import Image from 'next/image';
+// import { get } from '../../services/api.service';
+// import Header from '../../components/Header';
+// import classNames from 'classnames';
+// import Image from 'next/image';
 import BlogView from '../../modules/blogs';
 import Head from 'next/head';
 
