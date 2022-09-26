@@ -1,14 +1,14 @@
 import React from 'react'
 import HeroSection from './components/HeroSection'
-import RecentWork from './components/RecentWork'
+import ProjectWeventeComponent from './components/ProjectWeventeComponent'
 import ServicesSection from './components/ServicesSection'
 
 export default function HomeView() {
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 inline-block w-full">
+    <div className="bg-gray-100 dark:bg-gray-1000 inline-block w-full">
         <HeroSection />   
+        <ProjectWeventeComponent />
         <ServicesSection />
-        <RecentWork />
     </div>
   )
 }
