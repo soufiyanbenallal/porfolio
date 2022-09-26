@@ -4,6 +4,7 @@ import Box from './Box';
 import GetInTouch from './GetInTouch';
 import SocialMedia from './SocialMedia';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 // import Image from 'next/image';
 
 export default function Footer(): ReactElement {
@@ -18,7 +19,9 @@ export default function Footer(): ReactElement {
         <article className="flex flex-col md:flex-row mx-auto rounded-xl md:divide-x divide-gray-500 divide-opacity-20 z-50">
           <Box className="w-full flex-1 px-12 flex flex-col items-center py-10">
             <div className="w-24 h-24 mb-3 p-2 rounded-full  flex items-center justify-center">
-              <img
+              <Image
+                width={96}
+                height={96}
                 className="w-full h-full overflow-hidden object-cover rounded-full"
                 src="/profile.jpg"
                 alt="avatar"
