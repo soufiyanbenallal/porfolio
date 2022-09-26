@@ -6,8 +6,8 @@ import { AnimatedTextCharacter, AnimatedTextWord } from '../../../components/Box
 
 export default function HeroComponent() {
   return (
-      <section className="relative container-lg h-[calc(100vh-5rem)] flex items-center ">
-        <div className="flex w-full relative z-20">
+      <section className="relative h-[calc(100vh-5rem)] flex items-center ">
+        <div className="container-lg flex w-full relative z-20">
           <h1 className='dark:text-gray-200 text-7xl uppercase flex-1 max-w-xl'>
             One Story sounds good until another is told
           </h1>

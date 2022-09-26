@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 import { FADE_ANIM } from '../../../motions/home';
 import LogoNameComponent from '../../../components/heroSectionAnimation/LogoNameComponent';
 import { AnimatedTextCharacter } from '../../../shared/animation/TextAnimateChar';

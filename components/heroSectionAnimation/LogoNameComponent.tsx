@@ -23,7 +23,7 @@ export default function LogoNameComponent({className}: {className: string}) {
   };
     
   return (
-    <motion.svg className={classNames('flex w-[80vw]', className)}
+    <motion.svg className={classNames('flex md:w-[80vw] w-screen', className)}
       key={isDark ? 'dark':'light'}
       viewBox="0 0 1366 627.29"
       initial="hidden"

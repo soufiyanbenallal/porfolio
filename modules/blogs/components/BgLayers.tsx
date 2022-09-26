@@ -17,7 +17,7 @@ export default function BgLayers() {
     const y2 = useTransform(scrollY, [0, h], [-120, 120]);
     const inverseMove = {y: y2, x: x2}
   return (
-    <div className='w-screen overflow-hidden relative h-96'>
+    <div className='w-screen overflow-hidden relative h-96 z-10'>
         <motion.img   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }} style={inverseMove} className='absolute -top-48 left-0' src="bg/layer-1.png" alt="bg layers status animate" />
         <motion.img   initial={{ opacity: 0 }}
