@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { FADE_ANIM } from '../../../motions/home';
 import LogoNameComponent from '../../../components/heroSectionAnimation/LogoNameComponent';
 import { AnimatedTextCharacter } from '../../../shared/animation/TextAnimateChar';
+import Box from '../../../shared/animation/Box';
+import BoxWithScroll from '../../../shared/animation/BoxWithScroll';
 // import { ParallaxText } from '../../../motions/OnScroll';
 
 
@@ -10,7 +12,7 @@ export default function HeroSection() {
   return (
     <section className="relative w-screen h-screen flex flex-col ">
       
-      <article className="relative z-10 py-6 text-center md:text-left w-full h-full flex flex-col justify-center items-center">
+      <BoxWithScroll scale={2} className="relative z-10 py-6 text-center md:text-left w-full h-full flex flex-col justify-center items-center">
         {/* <motion.p {...FADE_ANIM} className='w-full text-center font-medium tracking-widest dark:text-gray-400 text-2xl mb-2'>Hello, I&apos;m</motion.p> */}
         <div className=' dark:text-gray-1000  font-one leading-[1]'>
           <LogoNameComponent className='dark:text-gray-100'/>
@@ -23,10 +25,8 @@ export default function HeroSection() {
         <div className=" top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute hidden">
           {/* <AnimatedTextCharacter text='SOUFIYAN' className="dark:text-red-base relative z-1 text-6xl md:text-[8rem] font-extrabold tracking-widest font-one text-center"/> */}
           {/* <LogoText className="dark:text-red-base relative z-1 text-6xl md:text-[8rem] font-extrabold tracking-widest font-one text-center"/> */}
-       
         </div>
-        
-      </article>
+      </BoxWithScroll>
 
 
 

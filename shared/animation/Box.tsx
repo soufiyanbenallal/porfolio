@@ -19,11 +19,22 @@ export default function Box({className, children, type, y=300,x=300, duration=1}
     const variants = {
         fade: {
             visible: { opacity: 1},
-            hidden: { opacity: 0 }
+            hidden: { opacity: 0,
+              transition:{
+                ease:'easeInOut',
+              }
+            }
         },
         slideVertical: {
             visible: { opacity: 1, scale: 1,y:0 },
-            hidden: { opacity: 0, scale: 1, y }
+            hidden: { opacity: 0, scale: 1, y,
+              transition: {
+                bounce: .4,
+                type:'spring',
+                damping: 8,
+                stiffness: 50,
+              }
+            }
           },
         slideHorizontal: {
             visible: { opacity: 1, scale: 1,x:0 },
@@ -39,14 +50,7 @@ export default function Box({className, children, type, y=300,x=300, duration=1}
     <motion.div
     className={className ? className : 'w-full'}
     ref={ref}
-    transition={{
-        duration,
-        bounce: .4,
-        type:'spring',
-        damping: 8,
-        stiffness: 50,
- 
-      }}
+    transition={{duration}}
     variants={variants[type]}
     initial="hidden"
     animate={control}

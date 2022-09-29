@@ -1,4 +1,5 @@
 import React from 'react'
+import BlogListComponent from './components/BlogListComponent'
 import HeroSection from './components/HeroSection'
 import ProjectWeventeComponent from './components/ProjectWeventeComponent'
 import ServicesSection from './components/ServicesSection'
@@ -9,6 +10,7 @@ export default function HomeView() {
         <HeroSection />   
         <ProjectWeventeComponent />
         <ServicesSection />
+        <BlogListComponent />
     </div>
   )
 }

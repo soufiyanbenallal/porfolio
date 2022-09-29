@@ -2,11 +2,12 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { AnimatedTextCharacter, AnimatedTextWord } from '../../../components/Box'
+import Box from '../../../shared/animation/Box'
 
 
 export default function HeroComponent() {
   return (
-      <section className="relative h-[calc(100vh-5rem)] flex items-center ">
+      <Box type='fade' duration={2} className="relative h-[calc(100vh-5rem)] flex items-center ">
         <div className="container-lg flex w-full relative z-20">
           <h1 className='dark:text-gray-200 text-7xl uppercase flex-1 max-w-xl'>
             One Story sounds good until another is told
@@ -27,6 +28,6 @@ export default function HeroComponent() {
           className="absolute top-0 left-0 w-screen h-full z-10">
           <Image src='/blog-hero.jpg' alt='BLOG statue | soufiyan benallal' layout='fill' objectFit='cover'/>
         </motion.div>
-      </section>
+      </Box>
   )
 }
