@@ -4,6 +4,13 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    loader: 'imgix',
+    path: '',
+    unoptimized: true,
+    domains: ['react-blog.ghost.io'],
+    formats: ['image/avif', 'image/webp']
+  },
 }
 
 module.exports = nextConfig
