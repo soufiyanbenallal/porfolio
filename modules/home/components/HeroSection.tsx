@@ -12,7 +12,7 @@ export default function HeroSection() {
   return (
     <section className="relative w-screen h-screen flex flex-col ">
       
-      <BoxWithScroll scale={2} className="relative z-10 py-6 text-center md:text-left w-full h-full flex flex-col justify-center items-center">
+      <BoxWithScroll scale={1.2} className="relative z-10 py-6 text-center md:text-left w-full h-full flex flex-col justify-center items-center">
         {/* <motion.p {...FADE_ANIM} className='w-full text-center font-medium tracking-widest dark:text-gray-400 text-2xl mb-2'>Hello, I&apos;m</motion.p> */}
         <div className=' dark:text-gray-1000  font-one leading-[1]'>
           <LogoNameComponent className='dark:text-gray-100'/>

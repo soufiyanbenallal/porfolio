@@ -4,11 +4,12 @@
 import React, { ReactNode, useEffect, useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { get } from '../../services/api.service';
-import Header from '../../components/Header';
-import classNames from 'classnames';
-import Image from 'next/image';
+// import Header from '../../components/Header';
+// import classNames from 'classnames';
+// import Image from 'next/image';
 import HeroComponent from './components/HeroComponent';
 import BgLayers from './components/BgLayers';
+import BlogListComponent from '../home/components/BlogListComponent';
 
 export default function BlogView() {
    // eslint-disable-next-line no-unused-vars
@@ -22,7 +23,7 @@ export default function BlogView() {
     */
     const fetchArticles = () => {
       const payload = {
-       'key': '589db86ec9016868926b237fcf',
+       'key': process.env.NEXT_PUBLIC_ENV_TOKEN,
        'pagination[page]': page,
        'pagination[pageSize]': 1,
        // fields: title,
@@ -43,7 +44,7 @@ export default function BlogView() {
     * lifecycle hook
     */
    useEffect(() => {
-     console.log('process.env.API_URL', process.env.NEXT_PUBLIC_ENV_API_URL);
+     console.log('process.env.API_URL', process.env.NEXT_PUBLIC_ENV_TOKEN);
      fetchArticles()
    }, []);
  
@@ -51,7 +52,8 @@ export default function BlogView() {
     <div className="bg-gray-100 dark:bg-gray-1000 block w-full">
       <HeroComponent />
       <BgLayers />
-        <div className="pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8 h-[100vw]">
+      <BlogListComponent />
+        <div className="pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8 h-32">
           {/* <div className="relative max-w-lg mx-auto divide-y-2 divide-gray-400 dark:divide-gray-800 lg:max-w-7xl">
             <div>
               <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 dark:text-gray-100 sm:text-4xl">

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React, { ReactElement, useEffect, useState } from 'react';
 import { get } from '../../services/api.service';
 import { useRouter } from 'next/router'
@@ -7,7 +6,7 @@ export default function Blog(): ReactElement {
   const {slug} = router.query
   const [post, setPost] = useState<any>({ meta: {}, data: [] });
   // const [loading, setLoading] = useState(true);
-  const [page, setPage] = useState(1);
+  // const [page, setPage] = useState(1);
   const [procced, setProcced] = useState(false);
   // const [page] = useState(0);
   /**
@@ -18,7 +17,7 @@ export default function Blog(): ReactElement {
 
      const payload = {
       'key': '589db86ec9016868926b237fcf',
-      page
+      // page
       // populate: 'author,category',
      }
     get(`content/posts/${slug}`, payload)
