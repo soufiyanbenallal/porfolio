@@ -1,13 +1,22 @@
 import React, { ReactElement, useEffect, useState } from 'react';
 import { get } from '../../services/api.service';
 import { useRouter } from 'next/router'
+import { IPost } from '../../shared/interfaces';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import useWindowSize from '../../shared/hooks/useWindowSize';
+
 export default function Blog(): ReactElement {
+  const {height} = useWindowSize()
+  const { scrollY } = useScroll();
+  const scale = useTransform(scrollY, [0, height], [1, 1.3]);
+  const y = useTransform(scrollY, [0, height], [0, -height]);
   const router = useRouter()
   const {slug} = router.query
   const [post, setPost] = useState<any>({ meta: {}, data: [] });
   // const [loading, setLoading] = useState(true);
   // const [page, setPage] = useState(1);
   const [procced, setProcced] = useState(false);
+  const [loading, setLoading] = useState(true);
   // const [page] = useState(0);
   /**
    * fetch articles
@@ -21,7 +30,7 @@ export default function Blog(): ReactElement {
       // populate: 'author,category',
      }
     get(`content/posts/${slug}`, payload)
-    .then(({data}) => {
+    .then(({data}: {data:{posts: IPost[]}}) => {
         setPost(data.posts[0]);
         setTimeout(() => {
           handleCodeCopy()
@@ -30,6 +39,9 @@ export default function Blog(): ReactElement {
     .catch(err => {
       console.log(err);
       
+    })
+    .finally(()=>{
+      setLoading(false)
     })
    }
 
@@ -75,115 +87,23 @@ export default function Blog(): ReactElement {
     
     setProcced(true)
   }
-  return (
-    <div className="relative py-32 bg-white overflow-hidden">
 
-      <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full ">
-        <div
-          className="relative h-full text-lg max-w-prose mx-auto"
-          aria-hidden="true"
-        >
-          <svg
-            className="absolute top-12 left-full transform translate-x-32"
-            width={404}
-            height={384}
-            fill="none"
-            viewBox="0 0 404 384"
-          >
-            <defs>
-              <pattern
-                id="74b3fd99-0a6f-4271-bef2-e80eeafdf357"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x={0}
-                  y={0}
-                  width={4}
-                  height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width={404}
-              height={384}
-              fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)"
-            />
-          </svg>
-          <svg
-            className="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32"
-            width={404}
-            height={384}
-            fill="none"
-            viewBox="0 0 404 384"
-          >
-            <defs>
-              <pattern
-                id="f210dbf6-a58d-4871-961e-36d5016a0f49"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x={0}
-                  y={0}
-                  width={4}
-                  height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width={404}
-              height={384}
-              fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
-            />
-          </svg>
-          <svg
-            className="absolute bottom-12 left-full transform translate-x-32"
-            width={404}
-            height={384}
-            fill="none"
-            viewBox="0 0 404 384"
-          >
-            <defs>
-              <pattern
-                id="d3eb07ae-5182-43e6-857d-35c643af9034"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x={0}
-                  y={0}
-                  width={4}
-                  height={4}
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width={404}
-              height={384}
-              fill="url(#d3eb07ae-5182-43e6-857d-35c643af9034)"
-            />
-          </svg>
-        </div>
-      </div>
-      <div className="relative px-4 sm:px-6 lg:px-8 prose lg:prose-xl mx-auto" dangerouslySetInnerHTML={{__html: post.html}}>
-        
-      </div>
+  if (loading) {
+    return <h1>loading...</h1>
+  }
+  return (
+    <div className="relative pb-32   overflow-hidden">
+      <section className=" w-full h-[40vh] md:h-[80vw] lg:h-[40vw]  overflow-hidden fixed top-0 bg-gray-1000 text-center z-[-1]">
+        <article className='absolute py-10 bottom-0 w-full left-0 z-20 bg-gradient-to-t from-black via-gray-900 to-transparent'>
+          <motion.h1 style={{scale, y}} className='lg:text-5xl md:text-3xl text-xl  text-red-base w-full max-w-3xl mx-auto'>{post.title}</motion.h1>
+        </article>
+        <motion.img style={{scale}} className='w-[80vw] mx-auto h-full object-cover z-10' src={post.feature_image} alt={post.feature_image_alt} />
+      </section>
+     <section className="w-full bg-white dark:bg-gray-900 z-10">
+      <div 
+          className="relative px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 prose lg:prose-lg mx-auto max-w-3xl dark:text-gray-300 mt-[40vh] md:mt-[80vw] lg:mt-[40vw]" 
+          dangerouslySetInnerHTML={{__html: post.html}}></div>
+      </section>
     </div>
   );
 }
