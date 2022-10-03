@@ -37,13 +37,13 @@ export default function BlogListComponent() {
     letter-spacing: 5.6vw;
     margin-right: -4rem; */}
 
-            <p className='dark:text-gray-200 text-[8rem] font-extrabold leading-[1] uppercase tracking-[5.6vw] mr-[-4rem]' >The Blog</p>
+            <p className='dark:text-gray-200 text-[8rem] font-extrabold leading-[1] uppercase tracking-widest' >The Blog</p>
         </Box>
         {
             posts.posts.map((post: IPost)=>{
 
             return<Box type='slideVertical' key={post.id} >
-                    <Link href={post.url}>
+                    <Link href={`/blogs/${post.id}`}>
                         <a className='flex gap-5'>
                             <img  src={post.feature_image} alt={post.feature_image_caption} width={500}  />
                             <div className='dark:text-gray-200 py-5'>

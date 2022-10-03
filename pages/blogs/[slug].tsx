@@ -8,8 +8,8 @@ import useWindowSize from '../../shared/hooks/useWindowSize';
 export default function Blog(): ReactElement {
   const {height} = useWindowSize()
   const { scrollY } = useScroll();
-  const scale = useTransform(scrollY, [0, height], [1, 1.3]);
-  const y = useTransform(scrollY, [0, height], [0, -height]);
+  const scale = useTransform(scrollY, [0, height], [1, 3]);
+  const y = useTransform(scrollY, [0, height], [0, height/2]);
   const router = useRouter()
   const {slug} = router.query
   const [post, setPost] = useState<any>({ meta: {}, data: [] });
@@ -29,7 +29,7 @@ export default function Blog(): ReactElement {
       // page
       // populate: 'author,category',
      }
-    get(`content/posts/${slug}`, payload)
+    get(`content/posts/${slug}/`, payload)
     .then(({data}: {data:{posts: IPost[]}}) => {
         setPost(data.posts[0]);
         setTimeout(() => {
@@ -67,7 +67,8 @@ export default function Blog(): ReactElement {
         if (pre.children.length > 1) {
           return;
         }
-        pre.classList.add('relative')
+        pre.classList.add('relative', 'bg-gray-800')
+        
         const span = document.createElement('span'); // is a node
         span.className =('absolute top-0 right-0 text-white px-3 py-2 block text-xs cursor-pointer hover:text-red-base active:scale-95')
         span.innerText = 'Copy';
@@ -92,18 +93,34 @@ export default function Blog(): ReactElement {
     return <h1>loading...</h1>
   }
   return (
-    <div className="relative pb-32   overflow-hidden">
-      <section className=" w-full h-[40vh] md:h-[80vw] lg:h-[40vw]  overflow-hidden fixed top-0 bg-gray-1000 text-center z-[-1]">
-        <article className='absolute py-10 bottom-0 w-full left-0 z-20 bg-gradient-to-t from-black via-gray-900 to-transparent'>
-          <motion.h1 style={{scale, y}} className='lg:text-5xl md:text-3xl text-xl  text-red-base w-full max-w-3xl mx-auto'>{post.title}</motion.h1>
+    <>
+      <section  className='sticky top-0 py-5 w-full left-0 z-10'>
+        <article className="container-lg flex justify-between">
+          <h1 className='lg:text-3xl md:text-3xl text-xl text-gray-200 w-full max-w-3xl '>{post.title}</h1>
+          <ul className='flex gap-6 w-1/3 justify-between'>
+            <li className='text-gray-200'>
+              <h6 className='uppercase tracking-wider'>Publication</h6>
+              <small className='text-gray-600'>1 jauny</small>
+            </li>
+            <li className='text-gray-200'>
+              <h6 className='uppercase tracking-wider'>Author</h6>
+              <small className='text-gray-600'>Soufiyan Benallal</small>
+            </li>
+            <li className='text-gray-200'>
+              <h6 className='uppercase tracking-wider'>Category</h6>
+              <small className='text-gray-600'>React</small>
+            </li>
+          </ul>
         </article>
-        <motion.img style={{scale}} className='w-[80vw] mx-auto h-full object-cover z-10' src={post.feature_image} alt={post.feature_image_alt} />
       </section>
-     <section className="w-full bg-white dark:bg-gray-900 z-10">
+      <section className="w-full h-[40vh] md:h-[80vw] lg:h-[40vw] flex items-center overflow-hidden -mt-28 relative bg-black text-center z-[-1]">
+        <motion.img style={{scale, y}} className='w-full mx-auto max-w-screen-md max-h-[200px] h-full object-cover z-10' src={post.feature_image} alt={post.feature_image_alt} />
+      </section>
+     <section className="sticky top-10 w-full bg-white z-10 py-32">
       <div 
-          className="relative px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 prose lg:prose-lg mx-auto max-w-3xl dark:text-gray-300 mt-[40vh] md:mt-[80vw] lg:mt-[40vw]" 
+          className="relative px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 prose lg:prose-lg mx-auto max-w-3xl" 
           dangerouslySetInnerHTML={{__html: post.html}}></div>
       </section>
-    </div>
+    </>
   );
 }

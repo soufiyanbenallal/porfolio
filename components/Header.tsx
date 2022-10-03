@@ -10,7 +10,6 @@ export default function Header(): ReactElement {
   const router = useRouter()
   const openWindow = () => {
     const res= isAlreadyOpened()
-    console.log('isAlreadyOpened', res);
     if (res.opened) {
       return;
     }
