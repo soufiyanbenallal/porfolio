@@ -37,7 +37,7 @@ export default function BlogListComponent() {
     letter-spacing: 5.6vw;
     margin-right: -4rem; */}
 
-            <p className='dark:text-gray-200 text-[8rem] font-extrabold leading-[1] uppercase tracking-widest' >The Blog</p>
+            <p className='dark:text-gray-200 text-[3rem] font-extrabold leading-[1] uppercase tracking-widest' >The Blog</p>
         </Box>
         {
             posts.posts.map((post: IPost)=>{

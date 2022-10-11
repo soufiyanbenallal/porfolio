@@ -7,11 +7,11 @@ export default function ServicesSection() {
     <Box type='fade' duration={.5} className="h-screen container-lg overflow-hidden flex items-center">
       {/* <Box /> */}
       <div className="grid grid-cols-1 gap-12  md:grid-cols-2 lg:grid-cols-3 rounded-b-xl ">
-        <Box type='slideVertical' y={300} duration={.8} className="col-span-1 md:col-span-2 lg:col-span-3 ">
+        <Box type='slideVertical' y={200} duration={.8} className="col-span-1 md:col-span-2 lg:col-span-3 ">
             <h2 className='text-red-base text-2xl'>The way</h2>
-            <p className='dark:text-gray-200 text-[8rem] font-extrabold leading-[1] uppercase'>how i work</p>
+            <p className='dark:text-gray-200 text-[3rem] font-extrabold leading-[1] uppercase'>how i work</p>
         </Box>
-        <Box type='slideVertical' className='dark:bg-gray-1000 bg-gray-200 p-7 rounded-3xl' >
+        <Box type='slideVertical' className='dark:bg-gray-1000 bg-gray-200 p-7 rounded-3xl'  y={200} >
           <svg    
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -37,7 +37,7 @@ export default function ServicesSection() {
             as modules that contains all the pages and components that are used.
           </p>
         </Box>
-        <Box type='slideVertical' className='dark:bg-gray-1000 bg-gray-200 p-7 rounded-3xl' y={350} >
+        <Box type='slideVertical' className='dark:bg-gray-1000 bg-gray-200 p-7 rounded-3xl' y={230} >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -71,7 +71,7 @@ export default function ServicesSection() {
             Framer motion for the animations and the interactions.
           </p>
         </Box>
-        <Box type='slideVertical' className='dark:bg-gray-1000 bg-gray-200 p-7 rounded-3xl'  y={400}>
+        <Box type='slideVertical' className='dark:bg-gray-1000 bg-gray-200 p-7 rounded-3xl'  y={260}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
