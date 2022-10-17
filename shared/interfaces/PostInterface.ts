@@ -1,36 +1,142 @@
 export  interface IPost{
-    id:string // '632f914f7e653b003dceece2',
-    uuid:string // 'c4507e2d-71d0-480f-a590-be9b61885dfe',
-    title:string // 'Building a Scalable and Modular Architecture for React-TS App',
-    slug:string // 'modular-architectures',
-    html:string // '<!--kg-card-begin: markdown--><h2 id="%F0%9F%9A%80-why-react-developers-should-modularize-their-applications">🚀 Why React developers should modularize their applications?</h2>\n<p>I’ve been developing applications with React for a long time and I’m loving it more and more. Therefore after extensive experience the project goona more difficult to reconginze the core and origine workflow, code organized by kind is certainly one of the most popular ways for javascript developers to structure their applications, putting files in buckets based on what they are, without considering the different relationships between the files. Categorizing files based on what they represent is an easy way of partitioning your project and has became a popular practice with developers who use patterns such as MVC. In my experience, that’s okay when you work on small applications, but it can have a tremendous effect on the team’s velocity as the application grows.</p>\n<p>When you work on a large project, it can be a difficult to identity to origin of an issue. As a developer, you might spend valuable time digging through thousands of lines of code until you understand all the relationships. Organizing your code by modules means you start thinking around a concept where you break down your code into related pieces and provide a public interface to use your module. It helps maximize code sharing and reusability in different sections of your application and even on other projects.</p>\n<p>In this essay i\'ll articulate how can you create modular scalable project structure and architecture with React. You can think of it as a mix of best practices and React basics. Of course they are not “rules” or something else, you can go on however you want, I just want to light some blub on mind..</p>\n<h3 id="lets-get-started">Lets get started</h3>\n<p>To define this structure i\'ll provide kinda app to explain the mysteries of Domain-Driven Design, today we will use the following dependencies:</p>\n<ul>\n<li>React-typescript (CRA)</li>\n<li>React-saga</li>\n<li>reduxjs/toolkit</li>\n<li>i18</li>\n<li>craco</li>\n<li>eslint</li>\n<li>prettier</li>\n<li>node-sas</li>\n<li>jest</li>\n<li>tailwindcss</li>\n<li>react-router-dom</li>\n</ul>\n<h3 id="initialize-the-app">Initialize the app</h3>\n<p>Before we start explaining this architecture you can create an app that you can practice with.</p>\n<pre><code>yarn create react-app my-app --template typescript\n</code></pre>\n<p>or</p>\n<pre><code>npx create-react-app my-app --template typescript\n</code></pre>\n<p>or<br>\nTo add TypeScript to an existing Create React App project, first install it:</p>\n<pre><code>yarn add typescript @types/node @types/react @types/react-dom @types/jest\n</code></pre>\n<p>then you need to add the follwing dependencies:</p>\n<pre><code>yarn add react-router-dom\n</code></pre>\n<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="navigating-a-directory-structure">Navigating a Directory Structure</h3>\n<p>Always have a starting point in your React application. This starting point comprises various folders such as assets, components, services, utils (reusable utility functions), pages, etc. Each of these folders contains various files required to fulfill the directory’s purpose.</p>\n<pre><code>└── /src\n    ├── /assets\n    ├── /components\n    ├── /context\n    ├── /hooks\n    ├── /pages\n    ├── /services\n    ├── /utils\n    └── App.js\n    ├── index.js\n```</code></pre>\n<!--kg-card-end: markdown-->',
-    comment_id:string // '632f914f7e653b003dceece2',
-    feature_image:string // 'https://react-blog.ghost.io/content/images/2022/09/peakpx.jpg',
-    featured:boolean // false,
-    visibility:string // 'public',
-    created_at:string // '2022-09-24T23:22:55.000+00:00',
-    updated_at:string // '2022-09-25T18:18:03.000+00:00',
-    published_at:string // '2022-09-25T18:08:39.000+00:00',
-    custom_excerpt:string // null,
-    codeinjection_head:string // null,
-    codeinjection_foot:string // null,
-    custom_template:string // null,
-    canonical_url:string // null,
-    url:string // 'https://react-blog.ghost.io/modular-architectures/',
-    excerpt:string // '🚀 Why React developers should modularize their applications?\n\n\nI’ve been developing applications with React for a long time and I’m loving it more and more. Therefore after extensive experience the project goona more difficult to reconginze the core and origine workflow, code organized by kind is certainly one of the most popular ways for javascript developers to structure their applications, putting files in buckets based on what they are, without considering the different relationships betwee',
-    reading_time:string // 2,
-    access:string // true,
-    comments:boolean // false,
-    og_image:string // null,
-    og_title:string // null,
-    og_description:string // null,
-    twitter_image:string // null,
-    twitter_title:string // null,
-    twitter_description:string // null,
-    meta_title:string // null,
-    meta_description:string // null,
-    email_subject:string // null,
-    frontmatter:string // null,
-    feature_image_alt:string // null,
-    feature_image_caption:string // 'soufiyan/Building a Scalable and Modular Architecture for React-TS App'
+        id: number,
+        date:string,
+        date_gmt:string,
+        guid: {
+            rendered:string,
+        },
+        better_featured_image: {
+            id: number,
+            alt_text: string,
+            caption: string,
+            media_type: string,
+            media_details: {
+                width: number,
+                height: number,
+                file: string,
+                filesize: number,
+                sizes: {
+                    medium: {
+                        file: string,
+                        width: number,
+                        height: number,
+                        'mime-type': string,
+                        filesize: number,
+                        source_url: string,
+                    },
+                    thumbnail: {
+                        file: string,
+                        width: number,
+                        height: number,
+                        'mime-type': string,
+                        filesize: number,
+                        source_url: string,
+                    },
+                    medium_large: {
+                        file: string,
+                        width: number,
+                        height: number,
+                        'mime-type': string,
+                        filesize: number,
+                        source_url: string,
+                    }
+                }
+            },
+            post: number,
+            source_url: string,
+        },
+        modified:string,
+        modified_gmt:string,
+        slug:string,
+        status:string,
+        type:string,
+        link:string,
+        title: {
+            rendered:string,
+        },
+        content: {
+            rendered:string,
+            protected: boolean
+        },
+        excerpt: {
+            rendered:string,
+            protected: boolean
+        },
+        author: number,
+        featured_media: boolean,
+        comment_status:string,
+        ping_status:string,
+        sticky: boolean,
+        template:string,
+        format:string,
+        meta: [],
+        categories: [
+            number
+        ],
+        tags: [],
+        _links: {
+            self: [
+                {
+                    href:string,
+                }
+            ],
+            collection: [
+                {
+                    href:string,
+                }
+            ],
+            about: [
+                {
+                    href:string,
+                }
+            ],
+            author: [
+                {
+                    embeddable: boolean,
+                    href:string,
+                }
+            ],
+            replies: [
+                {
+                    embeddable: boolean,
+                    href:string,
+                }
+            ],
+            versionhistory: [
+                {
+                    count: number,
+                    href:string,
+                }
+            ],
+            predecessorversion: [
+                {
+                    id: number,
+                    href:string,
+                }
+            ],
+            wpattachment: [
+                {
+                    href:string,
+                }
+            ],
+            wpterm: [
+                {
+                    taxonomy:string,
+                    embeddable: boolean,
+                    href:string,
+                },
+                {
+                    taxonomy:string,
+                    embeddable: boolean,
+                    href:string,
+                }
+            ],
+            curies: [
+                {
+                    name:string,
+                    href:string,
+                    templated: boolean
+                }
+            ]
+        }
 }

@@ -5,18 +5,17 @@ import { get } from '../../../services/api.service'
 import Box from '../../../shared/animation/Box'
 import BoxWithScroll from '../../../shared/animation/BoxWithScroll'
 import { IPost } from '../../../shared/interfaces'
+import { ApiEnum } from '../enums'
 
 export default function BlogListComponent() {
-    const [posts, setPosts] = useState({
-        posts: [],
-        meta: {}
-    })
+    const [posts, setPosts] = useState([])
     const fetchPosts = () => {
         const payload = {
-         'key': process.env.NEXT_PUBLIC_ENV_TOKEN,
-         'pagination[pageSize]': 3,
+            _embed: true
         }
-       get('content/posts', payload)
+        console.log('test : ??/');
+        
+       get(ApiEnum.POSTS, payload)
         .then(({data}) => {
             console.log(data);
             setPosts(data);
@@ -40,15 +39,15 @@ export default function BlogListComponent() {
             <p className='dark:text-gray-200 text-[3rem] font-extrabold leading-[1] uppercase tracking-widest' >The Blog</p>
         </Box>
         {
-            posts.posts.map((post: IPost)=>{
-
+            posts.map((post: IPost)=>{
+            const imgSrc = post.better_featured_image ? post.better_featured_image.media_details.sizes.thumbnail.source_url : ''
             return<Box type='slideVertical' key={post.id} >
                     <Link href={`/blogs/${post.id}`}>
                         <a className='flex gap-5'>
-                            <img  src={post.feature_image} alt={post.feature_image_caption} width={500}  />
+                            <img src={imgSrc} alt={post.title.rendered} width={500}  />
                             <div className='dark:text-gray-200 py-5'>
-                                <h2 className='text-4xl uppercase'>{post.title}</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, reiciendis rerum eum nemo qui harum accusamus porro, dolorum neque, maiores facilis totam aperiam quis amet esse consequuntur expedita reprehenderit beatae.</p>
+                                <h2 className='text-4xl uppercase'>{post.title?.rendered}</h2>
+                                <div dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}></div>
                             </div>
                         </a>
                     </Link>

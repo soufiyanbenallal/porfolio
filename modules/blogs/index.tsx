@@ -13,39 +13,39 @@ import BlogListComponent from '../home/components/BlogListComponent';
 
 export default function BlogView() {
    // eslint-disable-next-line no-unused-vars
-   const [articles, setArticles] = useState<any>({ meta: {}, data: [] });
-   // const [loading, setLoading] = useState(true);
-   const [page, setPage] = useState(0);
-   // const [page] = useState(0);
-   /**
-    * fetch articles
-    * @return {Promise<void>}
-    */
-    const fetchArticles = () => {
-      const payload = {
-       'key': process.env.NEXT_PUBLIC_ENV_TOKEN,
-       'pagination[page]': page,
-       'pagination[pageSize]': 1,
-       // fields: title,
-       populate: 'author,category',
-      }
+  //  const [articles, setArticles] = useState<any>({ meta: {}, data: [] });
+  //  // const [loading, setLoading] = useState(true);
+  //  const [page, setPage] = useState(0);
+  //  // const [page] = useState(0);
+  //  /**
+  //   * fetch articles
+  //   * @return {Promise<void>}
+  //   */
+  //   const fetchArticles = () => {
+  //     const payload = {
+  //      'key': process.env.NEXT_PUBLIC_ENV_TOKEN,
+  //      'pagination[page]': page,
+  //      'pagination[pageSize]': 1,
+  //      // fields: title,
+  //      populate: 'author,category',
+  //     }
  
-     get('content/posts', payload)
-     .then(({data}) => {
-         console.log(data);
-         // setArticles(data);
-     })
-     .catch(err => {
-         console.log(err);
-     })
-    }
+  //    get('content/posts', payload)
+  //    .then(({data}) => {
+  //        console.log(data);
+  //        // setArticles(data);
+  //    })
+  //    .catch(err => {
+  //        console.log(err);
+  //    })
+  //   }
  
    /**
     * lifecycle hook
     */
    useEffect(() => {
-     console.log('process.env.API_URL', process.env.NEXT_PUBLIC_ENV_TOKEN);
-     fetchArticles()
+    //  console.log('process.env.API_URL', process.env.NEXT_PUBLIC_ENV_TOKEN);
+    //  fetchArticles()
    }, []);
  
   return (

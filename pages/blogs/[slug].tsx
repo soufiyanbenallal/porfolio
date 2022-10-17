@@ -12,12 +12,10 @@ export default function Blog(): ReactElement {
   const y = useTransform(scrollY, [0, height], [0, height/2]);
   const router = useRouter()
   const {slug} = router.query
-  const [post, setPost] = useState<any>({ meta: {}, data: [] });
-  // const [loading, setLoading] = useState(true);
-  // const [page, setPage] = useState(1);
+  const [post, setPost] = useState<any>({});
+
   const [procced, setProcced] = useState(false);
   const [loading, setLoading] = useState(true);
-  // const [page] = useState(0);
   /**
    * fetch articles
    * @return {Promise<void>}
@@ -25,13 +23,15 @@ export default function Blog(): ReactElement {
    const fetchPost = () => {
 
      const payload = {
-      'key': '589db86ec9016868926b237fcf',
+      // 'key': '589db86ec9016868926b237fcf',
       // page
       // populate: 'author,category',
      }
-    get(`content/posts/${slug}/`, payload)
-    .then(({data}: {data:{posts: IPost[]}}) => {
-        setPost(data.posts[0]);
+    get(`posts/${slug}/`, payload)
+    .then(({data}: any): void => {
+      console.log(data);
+      
+        setPost(data);
         setTimeout(() => {
           handleCodeCopy()
         }, 300);
@@ -61,7 +61,6 @@ export default function Blog(): ReactElement {
     if (procced) {
         return;
       }
-      
       const pres = document.querySelectorAll('pre') as unknown as HTMLElement[]|| []
       pres.forEach((pre)=>{
         if (pre.children.length > 1) {
@@ -79,11 +78,8 @@ export default function Blog(): ReactElement {
           setTimeout(() => {
             span.innerText = 'Copy';
           }, 2000);
-          
         }
         pre.appendChild(span);
-        // pre.append('<span class=\'\'>Copy</span>')
-
       })
     
     setProcced(true)
@@ -92,11 +88,13 @@ export default function Blog(): ReactElement {
   if (loading) {
     return <h1>loading...</h1>
   }
+  const imgSrc = post.better_featured_image ? post.better_featured_image.source_url : ''
+
   return (
     <>
       <section  className='sticky top-0 py-5 w-full left-0 z-10'>
         <article className="container-lg flex justify-between">
-          <h1 className='lg:text-3xl md:text-3xl text-xl text-gray-200 w-full max-w-3xl '>{post.title}</h1>
+          <h1 className='lg:text-3xl md:text-3xl text-xl text-gray-200 w-full max-w-3xl '>{post.title.rendered}</h1>
           <ul className='flex gap-6 w-1/3 justify-between'>
             <li className='text-gray-200'>
               <h6 className='uppercase tracking-wider'>Publication</h6>
@@ -114,12 +112,13 @@ export default function Blog(): ReactElement {
         </article>
       </section>
       <section className="w-full h-[40vh] md:h-[80vw] lg:h-[40vw] flex items-center overflow-hidden -mt-28 relative bg-black text-center z-[-1]">
-        <motion.img style={{scale, y}} className='w-full mx-auto max-w-screen-md max-h-[200px] h-full object-cover z-10' src={post.feature_image} alt={post.feature_image_alt} />
+       
+        <motion.img style={{scale, y}} className='w-full mx-auto max-w-screen-md max-h-[200px] h-full object-cover z-10' src={imgSrc} alt={post.title.rendered} />
       </section>
      <section className="sticky top-10 w-full bg-white z-10 py-32">
       <div 
           className="relative px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 prose lg:prose-lg mx-auto max-w-3xl" 
-          dangerouslySetInnerHTML={{__html: post.html}}></div>
+          dangerouslySetInnerHTML={{__html: post.content?.rendered}}></div>
       </section>
     </>
   );
