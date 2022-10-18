@@ -5,10 +5,10 @@ import Box from '../../../shared/animation/Box'
 export default function ProjectWeventeComponent() {
   return (
    
-    <section className="h-screen relative flex flex-col items-center">
+    <section className="h-screen relative flex flex-col items-center container">
       <Box type='fade' duration={1.5}>
           <img
-              className="w-full h-[100vh] object-cover bg-black opacity-25"
+              className="w-full  object-contain bg-black "
               src="/projects/wevente.png"
               alt=""
           />

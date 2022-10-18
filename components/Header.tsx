@@ -30,25 +30,8 @@ export default function Header(): ReactElement {
           </a>
         </Link>
         <div className="hidden md:flex items-center">
-        <BuyMeCoffe className='flex items-center space-x-2 border-[2px] border-red-base text-red-base px-3 py-1 rounded-md'  href="https://www.buymeacoffee.com/soufiyan" target="_blank" rel="noreferrer" />
-        <span className="dark:text-gray-700 text-gray-400 mx-6">-</span>
 
-          {router.query['aarmy'] && <>
-            <button
-              onClick={openWindow}
-              className="fill-curren text-gray-100 bg-red-base px-4 py-1 rounded-full"
-            >
-              Connect with Aarmy 1
-            </button>
-            <span className="dark:text-gray-700 text-gray-400 mx-6">-</span>
-            <a
-              href='http://localhost:3000/auth/authorize?client_id=123456789&redirect_to=https://soufiyan.com'
-              className="fill-curren text-gray-100 bg-blue-600 px-4 py-1 rounded-full"
-            >
-              Connect with Aarmy 2
-            </a>
-            <span className="dark:text-gray-700 text-gray-400 mx-6">-</span>
-          </>}
+
 
           <a
             href="mailto:benallalsoufiane1@gmail.com?subject=🤝%20Project%20info.%20Let's%20talk"
@@ -60,7 +43,7 @@ export default function Header(): ReactElement {
           {
             router.pathname === '/' ?  <Link href="/blogs">
             <a className="fill-current dark:text-gray-100 text-gray-900">
-              Blogs
+              My Blogs
             </a>
           </Link>
           : <Link href="/">
