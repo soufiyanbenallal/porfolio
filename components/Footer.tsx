@@ -5,6 +5,7 @@ import GetInTouch from './GetInTouch';
 import SocialMedia from './SocialMedia';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import BuyMeCoffe from './BuyMeCoffe';
 // import Image from 'next/image';
 
 export default function Footer(): ReactElement {
@@ -83,25 +84,15 @@ export default function Footer(): ReactElement {
               Frontend Engineering
             </h2>
             <p className="text-gray-600 text-sm tracking-normal font-normal mb-3 text-center">
-              Freelance / contracter
+              Who am i ?
             </p>
             <p className="text-gray-500 dark:text-gray-800 text-xs tracking-normal font-normal mb-8 text-center w-full">
               I am a person who is always looking for new challenges and new
               opportunities.
             </p>
             <div className="flex items-start space-x-3">
-              <div className="dark:bg-gray-200 bg-gray-1000 text-gray-600 border dark:border-gray-300 border-gray-800 rounded-full text-xs leading-3 py-2 px-3">
-                react
-              </div>
-              <div className="dark:bg-gray-200 bg-gray-1000 text-gray-600 border dark:border-gray-300 border-gray-800 rounded-full text-xs leading-3 py-2 px-3">
-                sass
-              </div>
-              <div className="dark:bg-gray-200 bg-gray-1000 text-gray-600 border dark:border-gray-300 border-gray-800 rounded-full text-xs leading-3 py-2 px-3">
-                UI/UX
-              </div>
-              <div className="dark:bg-gray-200 bg-gray-1000 text-gray-600 border dark:border-gray-300 border-gray-800 rounded-full text-xs leading-3 py-2 px-3">
-                Nuxt
-              </div>
+              <BuyMeCoffe className='flex items-center space-x-2 border-red-base text-red-base px-3 py-1 rounded-md'  href="https://www.buymeacoffee.com/soufiyan" target="_blank" rel="noreferrer" />
+              
             </div>
           </Box>
         </article>

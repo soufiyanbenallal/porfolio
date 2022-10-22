@@ -38,7 +38,14 @@ export default function Box({className, children, type, y=300,x=300, duration=1}
           },
         slideHorizontal: {
             visible: { opacity: 1, scale: 1,x:0 },
-            hidden: { opacity: 0, scale: 1, x, }
+            hidden: { opacity: 0, scale: 1, x, 
+              transition: {
+                bounce: .4,
+                type:'spring',
+                damping: 8,
+                stiffness: 50,
+              }
+            }
         },
     };
     

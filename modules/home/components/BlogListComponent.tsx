@@ -40,12 +40,12 @@ export default function BlogListComponent() {
         </Box>
         {
             posts.map((post: IPost)=>{
-            const imgSrc = post.better_featured_image ? post.better_featured_image.media_details.sizes.thumbnail.source_url : ''
+            const imgSrc = post.better_featured_image ? post.better_featured_image.media_details.sizes.medium_large.source_url : ''
             return<Box type='slideVertical' key={post.id} >
                     <Link href={`/blogs/${post.id}`}>
                         <a className='flex gap-5'>
-                            <img src={imgSrc} alt={post.title.rendered} width={500}  />
-                            <div className='dark:text-gray-200 py-5'>
+                            <img src={imgSrc} alt={post.title.rendered} className='w-2/3'  />
+                            <div className='dark:text-gray-200 py-5 w-1/3'>
                                 <h2 className='text-4xl uppercase'>{post.title?.rendered}</h2>
                                 <div dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}></div>
                             </div>

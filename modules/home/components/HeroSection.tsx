@@ -17,7 +17,7 @@ export default function HeroSection() {
         <div className=' dark:text-gray-1000  font-one leading-[1]'>
           <LogoNameComponent className='dark:text-gray-100'/>
           <motion.div className="dark:text-gray-300 font-sans font-thin text-xl leading-6 space-y-2 mt-[-10vw] ml-[2vw]">
-            <AnimatedTextCharacter text='Im A Frontend and UX/UI developer' />
+            <AnimatedTextCharacter text='Im A Frontend and UI/UX developer,' />
             <AnimatedTextCharacter text='With a passion for creating slick digital experiences.' />
           </motion.div>
         </div>
